@@ -1,0 +1,535 @@
+[
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "320",
+      "800"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 800,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 320
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkNarrowHome()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "documentOverflow": false,
+        "unchangedElements": 264,
+        "width": 320
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "390",
+      "844"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 844,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 390
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkNarrowHome()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "documentOverflow": false,
+        "unchangedElements": 264,
+        "width": 390
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "800",
+      "1024"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1024,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 800
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkNarrowHome()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "documentOverflow": false,
+        "unchangedElements": 264,
+        "width": 800
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1024",
+      "768"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 768,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1024
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkNarrowHome()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "documentOverflow": false,
+        "unchangedElements": 264,
+        "width": 1024
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1279",
+      "900"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 900,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1279
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkNarrowHome()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "documentOverflow": false,
+        "unchangedElements": 264,
+        "width": 1279
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "lifecycle": {
+    "effectiveLaunch": {
+      "browserLaunched": true,
+      "engine": "chrome",
+      "launchHash": 10555201366498914000
+    },
+    "launched": false,
+    "relaunchedBrowser": false,
+    "restartedBackground": false,
+    "restoreStatus": "missing",
+    "reused": true,
+    "saveStatus": "saved"
+  },
+  "origin": "http://127.0.0.1:3890/",
+  "result": {
+    "container": 2400,
+    "font": 128,
+    "header": "184px",
+    "initialized": true,
+    "overflow": false,
+    "width": 3840
+  }
+}

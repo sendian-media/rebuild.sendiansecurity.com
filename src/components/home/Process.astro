@@ -1,0 +1,5 @@
+---
+import { home } from '@/data/home';
+---
+
+<section class="process"><div class="container"><p class="eyebrow eyebrow-light">How we work</p><h2>Consult → Design → Deploy<br />→ Commission → Maintain.</h2><div class="process-grid">{home.steps.map((step, index) => <article class="process-step"><div class="process-step-heading"><span>0{index + 1}</span><h3>{step.title}</h3></div><p>{step.description}</p></article>)}</div></div></section>

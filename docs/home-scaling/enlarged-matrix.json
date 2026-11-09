@@ -1,0 +1,441 @@
+[
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1280",
+      "800"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 800,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1280
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkHomeScaling()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "columns": {
+          ".certificates-grid": 5,
+          ".metrics-grid": 4,
+          ".process-grid": 5,
+          ".projects-grid": 3,
+          ".solutions-grid": 4,
+          ".trust-grid": 3
+        },
+        "container": 800,
+        "dpr": 1,
+        "headerHeight": 109.296875,
+        "height": 800,
+        "heroHeight": 727.5,
+        "heroType": 85.3333,
+        "pass": "[REDACTED]",
+        "textScale": 2,
+        "width": 1280
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "2560",
+      "1440"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1440,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 2560
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkHomeScaling()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "columns": {
+          ".certificates-grid": 5,
+          ".metrics-grid": 4,
+          ".process-grid": 5,
+          ".projects-grid": 3,
+          ".solutions-grid": 4,
+          ".trust-grid": 3
+        },
+        "container": 1600,
+        "dpr": 1,
+        "headerHeight": 218.640625,
+        "height": 1440,
+        "heroHeight": 1453.140625,
+        "heroType": 170.667,
+        "pass": "[REDACTED]",
+        "textScale": 2,
+        "width": 2560
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "3840",
+      "2160"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 2160,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 3840
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkHomeScaling()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "columns": {
+          ".certificates-grid": 5,
+          ".metrics-grid": 4,
+          ".process-grid": 5,
+          ".projects-grid": 3,
+          ".solutions-grid": 4,
+          ".trust-grid": 3
+        },
+        "container": 2400,
+        "dpr": 1,
+        "headerHeight": 328,
+        "height": 2160,
+        "heroHeight": 2178.875,
+        "heroType": 256,
+        "pass": "[REDACTED]",
+        "textScale": 2,
+        "width": 3840
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "1CA94948D72B1F60DEE2234C5C5B5CCD",
+      "title": "Sendian Security — Integrated security solutions in Qatar",
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "({saved:localStorage.getItem('sendian-home-text-size'),font:getComputedStyle(document.querySelector('.hero h1')).fontSize,pressed:document.querySelector('[data-ds-text-scale=\"2\"]').getAttribute('aria-pressed')})"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "missing",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "font": "256px",
+        "pressed": "true",
+        "saved": "2"
+      }
+    },
+    "success": true
+  }
+]

@@ -1,0 +1,127 @@
+<style is:global>
+  .site-header { position: sticky; top: 0; z-index: 10; }
+  main > section[id] { scroll-margin-top: 140px; }
+  .hero-wave-flow { display: none; position: absolute; inset: 0; overflow: hidden; z-index: -1; pointer-events: none; }
+
+  .hero-motion-controls { position: absolute; inset: auto 24px 18px; display: flex; z-index: 2; }
+  .hero-motion-controls[hidden] { display: none; }
+  html[data-home-motion] .feature-caption { bottom: 68px; }
+  .hero-slide-buttons { display: flex; gap: 4px; }
+  .hero-slide-button { display: grid; place-items: center; width: 36px; height: 36px; cursor: pointer; }
+  .hero-slide-button span { width: 26px; height: 4px; background: rgba(255,255,255,.4); }
+  .hero-slide-button[aria-pressed='true'] span { background: #a8ceff; }
+  .hero-slide-button:focus-visible { outline-color: white; }
+  @media (max-width: 480px) {
+    .hero-motion-controls { inset-inline: 12px; gap: 6px; }
+    .hero-slide-buttons { gap: 0; }
+    .hero-slide-button { width: 30px; }
+    .hero-slide-button span { width: 22px; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html[data-home-motion] .hero-waves { visibility: hidden; }
+    html[data-home-motion] .hero-wave-flow { display: block; }
+    html[data-home-motion] .hero-flow-wave { position: absolute; inset: 0 auto auto 0; width: 200%; height: 100%; animation: sendian-wave 28s linear infinite; }
+    html[data-home-motion] .hero-flow-wave:nth-child(2) { animation-duration: 20s; animation-direction: reverse; }
+    html[data-home-motion] .hero-flow-wave:nth-child(3) { animation-duration: 13s; }
+    html[data-home-motion='paused'] .hero-flow-wave { animation-play-state: paused; }
+    .hero-feature img { transition: opacity 300ms ease; }
+    .hero-feature img.is-changing { opacity: .3; }
+    .button, .vendor-link, .solution img, .project img { transition: filter 200ms ease, transform 350ms ease; }
+    .process-step, .process-step .process-step-heading h3 { transition: background-color 200ms ease, color 200ms ease; }
+    .solution:hover img, .project:hover img { transform: scale(1.025); }
+    @keyframes sendian-wave {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  }
+</style>
+
+<script>
+  const hero = document.querySelector<HTMLElement>('[data-carousel]');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const controls = hero?.querySelector<HTMLElement>('[data-motion-controls]');
+  const slides = Array.from(hero?.querySelectorAll<HTMLButtonElement>('[data-slide]') ?? []);
+  const image = hero?.querySelector<HTMLImageElement>('[data-slide-image]');
+  const title = hero?.querySelector<HTMLElement>('[data-slide-title]');
+  const description = hero?.querySelector<HTMLElement>('[data-slide-description]');
+  const number = hero?.querySelector<HTMLElement>('[data-slide-number]');
+
+  let activeSlide = 0;
+  let timer: ReturnType<typeof setInterval> | undefined;
+
+  if (hero && controls && image && title && description && number && slides.length > 1) {
+    const carousel = hero;
+    const imageElement = image;
+    const titleElement = title;
+    const descriptionElement = description;
+    const numberElement = number;
+
+    function showSlide(index: number) {
+      const slide = slides[index];
+      if (!slide || index === activeSlide) return;
+      activeSlide = index;
+      imageElement.src = slide.dataset.image ?? imageElement.src;
+      imageElement.alt = slide.dataset.alt ?? '';
+      titleElement.textContent = slide.dataset.title ?? '';
+      descriptionElement.textContent = slide.dataset.description ?? '';
+      numberElement.textContent = `${String(index + 1).padStart(2, '0')} ─────`;
+      slides.forEach((button, buttonIndex) => button.setAttribute('aria-pressed', String(buttonIndex === index)));
+      if (!motionPreference.matches && typeof imageElement.animate === 'function') {
+        imageElement.animate([{ opacity: .3 }, { opacity: 1 }], { duration: 350, easing: 'ease-out' });
+      }
+    }
+
+    function syncMotion() {
+      if (timer) clearInterval(timer);
+      const playing = !motionPreference.matches;
+      document.documentElement.dataset.homeMotion = playing ? 'playing' : 'paused';
+      if (!playing) {
+        document.querySelectorAll('main *').forEach((element) => {
+          element.getAnimations().forEach((animation) => {
+            if (!('animationName' in animation)) animation.cancel();
+          });
+        });
+      }
+      if (playing) {
+        timer = setInterval(() => {
+          if (!document.hidden && !carousel.matches(':hover') && !carousel.contains(document.activeElement)) {
+            showSlide((activeSlide + 1) % slides.length);
+          }
+        }, 6500);
+      }
+    }
+
+    slides.forEach((button, index) => button.addEventListener('click', () => showSlide(index)));
+    motionPreference.addEventListener('change', () => syncMotion());
+    controls.hidden = false;
+    syncMotion();
+  }
+
+  if ('IntersectionObserver' in window && typeof Element.prototype.animate === 'function') {
+    const targets = document.querySelectorAll<HTMLElement>(
+      '.metrics .metric, .about-grid > div, .solutions .eyebrow, .solutions h2, .solution, .process .eyebrow, .process h2, .process-step, .trust .eyebrow, .trust h2, .trust-item, .certifications .eyebrow, .certifications .section-heading-row, .certificate, .projects .eyebrow, .projects .section-heading-row, .project, .contact-inner > *'
+    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        if (motionPreference.matches || document.documentElement.dataset.homeMotion !== 'playing') return;
+        entry.target.animate(
+          [{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'translateY(0)' }],
+          { duration: 600, easing: 'cubic-bezier(.2, 0, 0, 1)' }
+        );
+      });
+    }, { threshold: .1 });
+    targets.forEach((target) => observer.observe(target));
+    document.addEventListener('focusin', (event) => {
+      let element = event.target instanceof Element ? event.target : null;
+      while (element && element !== document.body) {
+        element.getAnimations().forEach((animation) => {
+          if (animation instanceof Animation && !('animationName' in animation)) animation.cancel();
+        });
+        element = element.parentElement;
+      }
+    });
+  }
+</script>

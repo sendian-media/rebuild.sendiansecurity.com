@@ -1,0 +1,5 @@
+---
+import { home } from '@/data/home';
+---
+
+<section id="solutions" class="solutions"><div class="container"><p class="eyebrow">Our solutions</p><h2>Complete systems.<br />Clear solutions.</h2><div class="solutions-grid">{home.solutions.map((solution) => <article class="solution"><img src={solution.image} alt="" width="282" height="178" loading="lazy" /><p class="eyebrow solution-number">{solution.number}</p><h3>{solution.title}</h3><p>{solution.description}</p></article>)}</div></div></section>

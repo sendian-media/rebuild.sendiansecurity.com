@@ -1,0 +1,9 @@
+# Althec homepage motion reference
+
+- Source: `https://althec.fr/en/` homepage → local Sendian homepage `/`.
+- Scope: use interaction ideas only, preserving Sendian design, branding, copy and existing local assets. No Althec scripts, fonts, photos, text or services are used by the implementation.
+- Inspected at 1440×900, 768×900 and 375×812. Screenshots are under `docs/design-references/althec-fr/`; the desktop scroll capture is at y=1300. The source cookie notice remained visible; no form was submitted.
+- Observed: three independently moving background waves (approximately 28, 20 and 13 seconds); a timed hero image carousel with selectable indicators; a persistent header; scroll-enter and hover motion. The reference uses a larger page and other interactions that do not correspond to the Sendian homepage.
+- Adaptation: three new, repeating wave shapes derived from Sendian's Figma colors and layout flow continuously in CSS at 28, 20 and 13 seconds; the middle layer moves in reverse. The original Figma wave shapes remain the static fallback. The hero carousel uses four existing Sendian images and content with accessible manual slide buttons; no pause/resume control is rendered (visitors rely on reduced-motion settings to stop automatic motion); existing homepage sections and cards reveal once on entry; the header is sticky; existing cards have restrained hover motion. Timing, paths and content are adaptations, not a pixel-exact copy.
+- Accessibility: automatic motion stops for reduced motion; the carousel remains manually selectable via its slide buttons (the pause control was removed at the owner's request). With scripts unavailable, original content remains visible, controls are hidden, and the waves remain static.
+- Local assets are the existing Sendian assets documented in `docs/figma-homepage-assets.md`. Source screenshots are evidence only and are not served by the site.

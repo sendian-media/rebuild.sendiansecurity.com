@@ -1,0 +1,39 @@
+{
+  "lifecycle": {
+    "effectiveLaunch": {
+      "browserLaunched": true,
+      "engine": "chrome",
+      "launchHash": 10555201366498914000
+    },
+    "launched": false,
+    "relaunchedBrowser": false,
+    "restartedBackground": false,
+    "restoreStatus": "missing",
+    "reused": true,
+    "saveStatus": "saved"
+  },
+  "origin": "http://127.0.0.1:3889/",
+  "result": {
+    "doubledTextNodes": 117,
+    "layout": {
+      "columns": {
+        ".certificates-grid": 5,
+        ".metrics-grid": 4,
+        ".process-grid": 5,
+        ".projects-grid": 3,
+        ".solutions-grid": 4,
+        ".trust-grid": 3
+      },
+      "container": 1200,
+      "dpr": 1,
+      "headerHeight": 164,
+      "height": 1080,
+      "heroHeight": 1090.4375,
+      "heroType": 128,
+      "pass": "[REDACTED]",
+      "textScale": 2,
+      "width": 1920
+    },
+    "pressed": "true"
+  }
+}

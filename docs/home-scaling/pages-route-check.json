@@ -1,0 +1,389 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1920",
+      "1080"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1080,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1920
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3891/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3891/portfolio?industry=healthcare"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "FB63F3B3D1D8F03CA977E127BA60CEC7",
+      "title": "Healthcare projects — Sendian Security",
+      "url": "http://127.0.0.1:3891/portfolio?industry=healthcare"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "window.checkDesktopPage=eval('('+sessionStorage.getItem('qaScaling')+')');checkDesktopPage()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3891/portfolio?industry=healthcare",
+      "result": {
+        "container": 1200,
+        "h1": 144,
+        "ok": true,
+        "route": "/portfolio?industry=healthcare",
+        "textScale": 2,
+        "width": 1920
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3891/portfolio?industry=healthcare"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "({active:document.querySelector('.pf-chip[aria-current=true]').textContent.trim(),heading:document.querySelector('.pf-register-head h2').textContent.trim(),scale:document.body.style.getPropertyValue('--ds-user-text-scale')})"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3891/portfolio?industry=healthcare",
+      "result": {
+        "active": "Healthcare",
+        "heading": "Healthcare projects.",
+        "scale": "2"
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3891/portfolio?industry=healthcare"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "document.querySelector('.pf-chip[href=\"/portfolio?industry=retail\"]').click()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3891/portfolio?industry=healthcare",
+      "result": null
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3891/portfolio?industry=retail"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(async()=>{await document.fonts.ready;const active=document.querySelector('.pf-chip[aria-current=true]')?.textContent.trim();if(active!=='Retail')throw Error('Filter navigation failed: '+active);return {url:location.href,active,scale:document.body.style.getPropertyValue('--ds-user-text-scale'),cards:document.querySelectorAll('.pf-card').length}})()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3891/portfolio?industry=retail",
+      "result": {
+        "active": "Retail",
+        "cards": 6,
+        "scale": "2",
+        "url": "http://127.0.0.1:3891/portfolio?industry=retail"
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3891/portfolio?industry=retail"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3891/"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "FB63F3B3D1D8F03CA977E127BA60CEC7",
+      "title": "Sendian Security — Integrated security solutions in Qatar",
+      "url": "http://127.0.0.1:3891/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "window.checkDesktopPage=eval('('+sessionStorage.getItem('qaScaling')+')');checkDesktopPage()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3891/",
+      "result": {
+        "container": 1200,
+        "h1": 128,
+        "ok": true,
+        "route": "/",
+        "textScale": 2,
+        "width": 1920
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3891/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "({controls:document.querySelectorAll('[data-home-text-size]').length,scale:document.body.style.getPropertyValue('--ds-user-text-scale'),pressed:document.querySelector('[data-ds-text-scale=\"2\"]').getAttribute('aria-pressed')})"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3891/",
+      "result": {
+        "controls": 1,
+        "pressed": "true",
+        "scale": "2"
+      }
+    },
+    "success": true
+  }
+]

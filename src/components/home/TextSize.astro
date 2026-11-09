@@ -1,0 +1,38 @@
+<details class="home-text-size" data-home-text-size hidden>
+  <summary>Text size</summary>
+  <div class="home-text-size-actions" role="group" aria-label="Desktop text size">
+    {[1, 1.25, 1.5, 2].map((scale) => (
+      <button type="button" data-ds-text-scale={scale} aria-pressed={scale === 1 ? 'true' : 'false'}>
+        {scale * 100}%
+      </button>
+    ))}
+  </div>
+</details>
+
+<script>
+  const controls = document.querySelector<HTMLElement>('[data-home-text-size]');
+  const page = document.querySelector<HTMLElement>('.page-home, .page-about, .page-portfolio');
+  if (controls && page) {
+    const buttons = Array.from(controls.querySelectorAll<HTMLButtonElement>('[data-ds-text-scale]'));
+    const key = 'sendian-home-text-size';
+    const allowed = [1, 1.25, 1.5, 2];
+    const fontPreference = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
+    const apply = (value: number) => {
+      const scale = allowed.includes(value) ? value : 1;
+      page.style.setProperty('--ds-user-text-scale', String(scale * fontPreference));
+      buttons.forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.dsTextScale) === scale)));
+      try { localStorage.setItem(key, String(scale)); } catch { /* Storage is optional. */ }
+    };
+    let saved = 1;
+    try { saved = Number(localStorage.getItem(key) ?? 1); } catch { /* Keep the default. */ }
+    apply(saved);
+    buttons.forEach((button) => button.addEventListener('click', () => apply(Number(button.dataset.dsTextScale))));
+    controls.hidden = false;
+
+    const header = document.querySelector<HTMLElement>('.site-header');
+    if (header) {
+      // Enlarged navigation can wrap; anchor offsets must follow its actual height.
+      new ResizeObserver(() => page.style.setProperty('--ds-header-height', `${header.getBoundingClientRect().height}px`)).observe(header);
+    }
+  }
+</script>

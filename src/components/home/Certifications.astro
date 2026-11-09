@@ -1,0 +1,5 @@
+---
+import { home } from '@/data/home';
+---
+
+<section class="certifications"><div class="container"><p class="eyebrow">Our certifications</p><div class="section-heading-row"><h2>Certified for excellence.</h2><p>Management-system certificates<br />issued to Sendian Group.</p></div><div class="certificates-grid">{home.certificates.map((certificate) => <article class="certificate"><img src={`/images/about/certifications/${certificate.image}`} alt={`${certificate.name} certificate`} width="192" height="272" loading="lazy" /><h3>{certificate.name}</h3><p>{certificate.description}</p></article>)}</div></div></section>

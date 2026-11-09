@@ -1,0 +1,23 @@
+{
+  "skill_name": "desktop-responsive-scaling",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Give me a read-only scaling plan; do not edit the website. The approved Sendian home at 1920 CSS pixels has 1200px content, a 64px H1, a 720px hero, four solution cards and three project cards. It looks too small on 4K. I want those same proportions without a cap, including header/footer and text. Our shared shell uses Tailwind's .container. Show the expected 2560, 3840 and 5120 measurements, identify the cascade trap to inspect, and explain how you will verify text enlargement without changing other routes or mobile.",
+      "expected_output": "Derives all dimensions from the 1920 CSS reference without a cap; reports content/H1/hero values of 1600/85.33/960 at 2560, 2400/128/1440 at 3840, and 3200/170.67/1920 at 5120. Identifies inherited container max-width, preserves four solution and three project columns, scopes shared components, and proposes independent 200% text verification including non-heading text. Does not modify files or treat formulas as browser measurements.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Review this migration plan without modifying files. This is a different site: our approved reference is 1440 CSS pixels, the shell is 1184px, H1 is 56px and the projects grid has four columns. A developer proposes copying Sendian's 1920/1200/64 tokens, globally clearing every max-width, using auto-fit for projects, and setting html font-size to vw. They also promise a smooth 1279/1280 transition while leaving all existing narrow styles unchanged. Correct the plan, calculate the shell and H1 at 1920, and list the checks you would need before claiming success.",
+      "expected_output": "Uses the site's own 1440 reference and computes approximately 1578.67px shell and 74.67px H1 at 1920. Rejects copying another baseline, unscoped max-width removal, changing grid counts and viewport root sizing. Distinguishes shell caps from reading measure, flags that handoff continuity requires measurement and possibly a separate narrow-layout decision, and requires rendered scaling, overflow, text-enlargement and route regression checks. Makes no file changes.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I have two PNG screenshots that are both 1920 pixels wide, but the website content looks smaller in one. I don't know the browser zoom, DPR or CSS viewport. Make every monitor show exactly the same number of sections and the same physical text size, including an ultrawide monitor. Before changing code, tell me what needs clarifying and what you can actually guarantee. Do not invent a reference width or implement anything yet.",
+      "expected_output": "Explains that screenshot bitmap size cannot establish the CSS viewport or reference. Asks for the approved composition, CSS viewport/zoom/DPR and whether the goal is proportional occupancy versus fixed physical/pixel sizes. Explains aspect-ratio/fold differences and physical-size limits; does not promise identical visible sections, force fixed section heights, infer a 1920 CSS reference, or write code.",
+      "files": []
+    }
+  ]
+}

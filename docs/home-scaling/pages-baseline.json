@@ -1,0 +1,357 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1920",
+      "1080"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1080,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1920
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(async()=>{await document.fonts.ready;return Object.fromEntries(['.container','.site-header','.ab-hero','.ab-hero h1','.ab-who-grid','.ab-who h2','.ab-pillars-grid','.ab-vision-half','.ab-caps-grid','.certifications','.certificate','.contact','.site-footer'].map(q=>{const e=document.querySelector(q),s=getComputedStyle(e),r=e.getBoundingClientRect();return [q,{w:r.width,h:r.height,font:s.fontSize,gap:s.gap,padding:s.padding,columns:s.gridTemplateColumns}]}))})()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        ".ab-caps-grid": {
+          "columns": "576px 576px",
+          "font": "16px",
+          "gap": "20px 48px",
+          "h": 580,
+          "padding": "0px",
+          "w": 1200
+        },
+        ".ab-hero": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 300,
+          "padding": "42px 0px 93px",
+          "w": 1920
+        },
+        ".ab-hero h1": {
+          "columns": "none",
+          "font": "56px",
+          "gap": "normal",
+          "h": 64,
+          "padding": "0px",
+          "w": 1200
+        },
+        ".ab-pillars-grid": {
+          "columns": "384px 384px 384px",
+          "font": "16px",
+          "gap": "24px",
+          "h": 313,
+          "padding": "0px",
+          "w": 1200
+        },
+        ".ab-vision-half": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 419.5,
+          "padding": "96px 120px 148px",
+          "w": 960
+        },
+        ".ab-who h2": {
+          "columns": "none",
+          "font": "38px",
+          "gap": "normal",
+          "h": 245,
+          "padding": "0px",
+          "w": 620
+        },
+        ".ab-who-grid": {
+          "columns": "520px 620px",
+          "font": "16px",
+          "gap": "60px",
+          "h": 441,
+          "padding": "0px",
+          "w": 1200
+        },
+        ".certificate": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 420,
+          "padding": "13px 15px 20px",
+          "w": 224
+        },
+        ".certifications": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 759.796875,
+          "padding": "68px 0px 125px",
+          "w": 1920
+        },
+        ".contact": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 280.375,
+          "padding": "56px 0px 93px",
+          "w": 1920
+        },
+        ".container": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "26px",
+          "h": 92,
+          "padding": "0px",
+          "w": 1200
+        },
+        ".site-footer": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 339.09375,
+          "padding": "57px 0px 28px",
+          "w": 1920
+        },
+        ".site-header": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 92,
+          "padding": "0px",
+          "w": 1920
+        }
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/portfolio"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "FB63F3B3D1D8F03CA977E127BA60CEC7",
+      "title": "Sendian Security — Projects & portfolio",
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(async()=>{await document.fonts.ready;return Object.fromEntries(['.container','.site-header','.pf-hero-inner','.pf-hero h1','.pf-filters','.pf-chip','.pf-grid','.pf-card','.pf-w-wide','.pf-badge','.contact','.site-footer'].map(q=>{const e=document.querySelector(q),s=getComputedStyle(e),r=e.getBoundingClientRect();return [q,{w:r.width,h:r.height,font:s.fontSize,gap:s.gap,padding:s.padding,columns:s.gridTemplateColumns}]}))})()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/portfolio",
+      "result": {
+        ".contact": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 280.375,
+          "padding": "56px 0px 93px",
+          "w": 1920
+        },
+        ".container": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "26px",
+          "h": 91,
+          "padding": "0px",
+          "w": 1200
+        },
+        ".pf-badge": {
+          "columns": "none",
+          "font": "10px",
+          "gap": "normal",
+          "h": 27,
+          "padding": "6px 9px",
+          "w": 162
+        },
+        ".pf-card": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 342.984375,
+          "padding": "0px",
+          "w": 383.984375
+        },
+        ".pf-chip": {
+          "columns": "none",
+          "font": "12px",
+          "gap": "normal",
+          "h": 38,
+          "padding": "0px 17px",
+          "w": 136.078125
+        },
+        ".pf-filters": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 127,
+          "padding": "21px 0px 39px",
+          "w": 1920
+        },
+        ".pf-grid": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "52px 24px",
+          "h": 862.96875,
+          "padding": "0px",
+          "w": 1200
+        },
+        ".pf-hero h1": {
+          "columns": "none",
+          "font": "72px",
+          "gap": "normal",
+          "h": 158,
+          "padding": "0px",
+          "w": 762.1875
+        },
+        ".pf-hero-inner": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 550,
+          "padding": "56px 0px 62px",
+          "w": 1200
+        },
+        ".pf-w-wide": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 467.984375,
+          "padding": "0px",
+          "w": 791.984375
+        },
+        ".site-footer": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 339.09375,
+          "padding": "57px 0px 28px",
+          "w": 1920
+        },
+        ".site-header": {
+          "columns": "none",
+          "font": "16px",
+          "gap": "normal",
+          "h": 92,
+          "padding": "0px",
+          "w": 1920
+        }
+      }
+    },
+    "success": true
+  }
+]

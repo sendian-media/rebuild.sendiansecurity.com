@@ -1,0 +1,43 @@
+---
+import { home } from '@/data/home';
+
+const slides = [
+  { image: home.hero.image, title: 'Security & surveillance', description: 'CCTV · Access control · Integration', alt: 'Security cameras mounted on a building' },
+  ...home.solutions.slice(1).map((solution) => ({
+    image: solution.image,
+    title: solution.title.replace('\n', ' '),
+    description: solution.description,
+    alt: solution.title.replace('\n', ' '),
+  })),
+];
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <svg class="hero-waves" viewBox="0 0 1440 720" preserveAspectRatio="none" aria-hidden="true"><path fill="#132853" d="M0 350 C250 385 380 535 690 455 C965 330 1010 325 1440 450 L1440 720 H0Z"/><path fill="#193767" d="M0 535 C400 600 630 340 990 450 C1190 510 1280 495 1440 540 L1440 720 H0Z"/><path fill="#224679" d="M0 575 C450 585 800 690 1440 555 L1440 720 H0Z"/></svg>
+  <div class="hero-wave-flow" aria-hidden="true">
+    <svg class="hero-flow-wave" viewBox="0 0 2880 720" preserveAspectRatio="none"><defs><path id="hero-wave-back" d="M0 380 C250 410 390 530 690 455 C970 355 1190 350 1440 380 L1440 720 H0 Z" /></defs><use href="#hero-wave-back" fill="#132853"/><use href="#hero-wave-back" x="1440" fill="#132853"/></svg>
+    <svg class="hero-flow-wave" viewBox="0 0 2880 720" preserveAspectRatio="none"><defs><path id="hero-wave-middle" d="M0 530 C350 590 650 365 990 450 C1190 500 1250 498 1440 530 L1440 720 H0 Z" /></defs><use href="#hero-wave-middle" fill="#193767"/><use href="#hero-wave-middle" x="1440" fill="#193767"/></svg>
+    <svg class="hero-flow-wave" viewBox="0 0 2880 720" preserveAspectRatio="none"><defs><path id="hero-wave-front" d="M0 575 C450 610 800 680 1100 610 C1240 578 1350 568 1440 575 L1440 720 H0 Z" /></defs><use href="#hero-wave-front" fill="#224679"/><use href="#hero-wave-front" x="1440" fill="#224679"/></svg>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-light">Sendian Integrated Security Services</p>
+      <h1 id="hero-title">Integrated security<br />solutions in Qatar.</h1>
+      <p class="hero-description">Security, infrastructure and technology —<br />designed, delivered and supported by one team.</p>
+      <div class="hero-actions"><a class="button button-white" href="#contact">Request a consultation <span aria-hidden="true">→</span></a><a class="button button-outline" href="#solutions">Explore solutions</a></div>
+    </div>
+    <div class="hero-feature-wrap">
+      <span class="feature-label feature-label-top">Design</span><span class="feature-label feature-label-left">Audit</span><span class="feature-label feature-label-right">Deployment</span><span class="feature-label feature-label-bottom">Maintenance</span>
+      <div class="hero-feature" data-carousel aria-label="Featured solutions">
+        <img data-slide-image src={slides[0].image} alt={slides[0].alt} width="420" height="420" />
+        <div class="feature-shade"></div><span class="feature-number" data-slide-number>01 ─────</span>
+        <div class="feature-caption"><h2 data-slide-title>{slides[0].title}</h2><p data-slide-description>{slides[0].description}</p></div>
+        <div class="hero-motion-controls" data-motion-controls hidden>
+          <div class="hero-slide-buttons" role="group" aria-label="Choose a featured solution">
+            {slides.map((slide, index) => <button type="button" class="hero-slide-button" data-slide data-image={slide.image} data-title={slide.title} data-description={slide.description} data-alt={slide.alt} aria-label={`Show ${slide.title}`} aria-pressed={index === 0 ? 'true' : 'false'}><span></span></button>)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

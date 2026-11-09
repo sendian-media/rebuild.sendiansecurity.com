@@ -1,0 +1,5 @@
+---
+import { home } from '@/data/home';
+---
+
+<section class="trust section-pale"><div class="container"><p class="eyebrow">Built on trust</p><h2>Qualified to deliver.<br />Committed to support.</h2><div class="trust-grid">{home.credentials.map((credential) => <div class="trust-item"><img src={credential.image} alt="" width="104" height="65" loading="lazy" /><p>{credential.text}</p></div>)}</div></div></section>

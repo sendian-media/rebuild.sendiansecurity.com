@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { home } from '@/data/home';
+import Hero from '../components/home/Hero.astro';
+import Metrics from '../components/home/Metrics.astro';
+import About from '../components/home/About.astro';
+import Solutions from '../components/home/Solutions.astro';
+import Process from '../components/home/Process.astro';
+import Trust from '../components/home/Trust.astro';
+import Certifications from '../components/home/Certifications.astro';
+import Projects from '../components/home/Projects.astro';
+import Contact from '../components/home/Contact.astro';
+import HomeMotion from '../components/home/HomeMotion.astro';
+import '../styles/home-desktop.css';
+---
+
+<BaseLayout bodyClass="page-home" title="Sendian Security — Integrated security solutions in Qatar" description="We design, build and maintain integrated security, infrastructure, communication and automation systems across Qatar." socialImage={home.hero.image}>
+    <Hero />
+    <Metrics />
+    <About />
+    <Solutions />
+    <Process />
+    <Trust />
+    <Certifications />
+    <Projects />
+    <Contact />
+    <HomeMotion />
+</BaseLayout>

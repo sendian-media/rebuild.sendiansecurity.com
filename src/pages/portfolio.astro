@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Contact from '../components/home/Contact.astro';
+import { hero, industries, projects, type IndustrySlug } from '@/data/portfolio';
+
+// Filtered views mirror the design's per-sector pages: same shell, one industry.
+const params = Astro.url.searchParams;
+const requested = params.get('industry');
+const active = industries.find((i) => i.slug === requested) ?? null;
+const groups = active ? [{ ...active }] : industries;
+
+const title = active ? `${active.name} projects — Sendian Security` : 'Sendian Security — Projects & portfolio';
+const description = 'Explore Sendian Security projects across Qatar.';
+---
+
+<BaseLayout title={title} description={description} socialImage={hero.image} bodyClass="page-portfolio">
+  <section class="pf-hero">
+    <div class="container pf-hero-inner">
+      <p class="pf-eyebrow">Our portfolio</p>
+      <h1>Projects that<br />connect and protect.</h1>
+      <p class="pf-hero-sub">Explore Sendian Security projects across Qatar.</p>
+      <nav class="pf-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{active ? active.name : 'Portfolio'}</span></nav>
+    </div>
+  </section>
+
+  <section class="pf-filters" aria-label="Explore by industry">
+    <div class="container">
+      <p class="pf-eyebrow pf-eyebrow-muted">Explore by industry</p>
+      <div class="pf-chips">
+        <a class="pf-chip" href="/portfolio" aria-current={active ? undefined : 'true'}>All projects</a>
+        {industries.map((i) => (
+          <a class="pf-chip" href={`/portfolio?industry=${i.slug}`} aria-current={active?.slug === i.slug ? 'true' : undefined}>{i.name}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-register">
+    <div class="container">
+      {active && (
+        <div class="pf-register-head">
+          <p class="pf-eyebrow">{active.name}</p>
+          <h2>{active.name} projects.</h2>
+        </div>
+      )}
+
+      {groups.map((group) => (
+        <div class="pf-industry">
+          {!active && (
+            <div class="pf-industry-head">
+              <p class="pf-eyebrow">{group.name}</p>
+              <h3>{group.name} projects.</h3>
+            </div>
+          )}
+          {!active && <hr class="pf-rule" />}
+          <div class="pf-grid">
+            {projects[group.slug as IndustrySlug].map((project) => (
+              <article class:list={['pf-card', `pf-w-${project.width}`]}>
+                <div class="pf-card-media">
+                  <img src={project.image} alt={project.title} loading="lazy" />
+                  {project.badge && <span class="pf-badge">Illustrative image</span>}
+                </div>
+                <h4>{project.title}</h4>
+                {project.scope && <p class="pf-scope">{project.scope}</p>}
+
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <Contact />
+</BaseLayout>

@@ -1,0 +1,5 @@
+---
+import { home } from '@/data/home';
+---
+
+<section id="projects" class="projects section-pale"><div class="container"><p class="eyebrow">Unique projects</p><div class="section-heading-row"><h2>Trusted across Qatar.</h2><a class="text-link" href="/portfolio">Explore all projects <span aria-hidden="true">→</span></a></div><div class="projects-grid">{home.projects.map((project) => <article class="project"><img src={project.image} alt={project.name} width="384" height="250" loading="lazy" /><div><h3>{project.name}</h3><span aria-hidden="true">↗</span></div></article>)}</div></div></section>

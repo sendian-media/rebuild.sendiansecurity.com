@@ -1,0 +1,10 @@
+---
+import { site } from '@/data/site';
+const {
+  eyebrow = 'Start a conversation',
+  heading = 'Let’s discuss your project.',
+  sub = 'From initial requirements to long-term support.',
+} = Astro.props;
+---
+
+<section id="contact" class="contact"><div class="container contact-inner"><div><p class="eyebrow">{eyebrow}</p><h2>{heading}</h2><p>{sub}</p></div><a class="button button-white" href={`mailto:${site.email}`}>Request a consultation <span aria-hidden="true">→</span></a></div></section>

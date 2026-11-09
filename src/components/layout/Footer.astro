@@ -1,0 +1,6 @@
+---
+import { site } from '@/data/site';
+import { footerNavigation } from '@/data/navigation';
+---
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><a href="/" aria-label="Sendian Security home"><img class="footer-logo" src="/images/home/logo-header.png" alt="Sendian Integrated Security Services" width="160" height="54" /></a><p>Integrated security.<br />Connected infrastructure.<br />Built for Qatar.</p></div><div><h2 class="eyebrow eyebrow-light">Explore</h2><ul>{footerNavigation.map(({ href, label }) => <li><a href={href}>{label}</a></li>)}</ul></div><div><h2 class="eyebrow eyebrow-light">Contact</h2><p class="footer-contact"><a href={site.phoneHref}>{site.phone}</a><br /><a href={`mailto:${site.email}`}>{site.email}</a></p><p>{site.address[0]}<br />{site.address[1]}</p></div></div><div class="footer-bottom"><p>© 2026 Sendian Security</p><div><a href="/privacy">Privacy policy</a><a href="/terms">Terms and conditions</a></div></div><slot /></div></footer>

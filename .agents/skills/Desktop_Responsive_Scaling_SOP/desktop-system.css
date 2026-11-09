@@ -1,0 +1,121 @@
+/* Desktop proportional scaling starter. Read SOP.md before integration.
+ * Scope: CSS viewports >= 1280px with the default browser font size.
+ * Reference: 1440px wide, root default 16px. Values are examples, not an
+ * automatic pixel-perfect patch for either inspected website.
+ * Keep the root font size at its user-relative default; do not set it to vw.
+ * All rules are scoped so existing narrower layouts keep their own styles.
+ */
+@media (min-width: 80rem) {
+  .ds-system {
+    /* 16 at 1440; 20 at 1920; 25.333 at 2560; capped at 36 at 3840.
+     * A deliberate near-proportional curve, not exact viewport enlargement.
+     */
+    --ds-u: clamp(1rem, calc(0.25rem + 0.833333vw), 2.25rem);
+    --ds-type-u: calc(var(--ds-u) * var(--ds-user-text-scale, 1));
+
+    --ds-space-1: calc(0.25 * var(--ds-u));
+    --ds-space-2: calc(0.5 * var(--ds-u));
+    --ds-space-3: calc(0.75 * var(--ds-u));
+    --ds-space-4: var(--ds-u);
+    --ds-space-6: calc(1.5 * var(--ds-u));
+    --ds-space-8: calc(2 * var(--ds-u));
+    --ds-space-12: calc(3 * var(--ds-u));
+    --ds-space-16: calc(4 * var(--ds-u));
+    --ds-space-20: calc(5 * var(--ds-u));
+    --ds-space-24: calc(6 * var(--ds-u));
+
+    --ds-shell: calc(80 * var(--ds-u));
+    --ds-gutter: var(--ds-space-8);
+    --ds-section-space: var(--ds-space-20);
+    --ds-grid-gap: var(--ds-space-6);
+    --ds-card-radius: calc(0.5 * var(--ds-u));
+
+    --ds-text-caption: calc(0.875 * var(--ds-type-u));
+    --ds-text-body: var(--ds-type-u);
+    --ds-text-lead: calc(1.25 * var(--ds-type-u));
+    --ds-text-h3: calc(1.25 * var(--ds-type-u));
+    --ds-text-h2: calc(1.875 * var(--ds-type-u));
+    --ds-text-h1: calc(3.5 * var(--ds-type-u));
+
+    font-size: var(--ds-text-body);
+    line-height: 1.6;
+  }
+
+  .ds-system,
+  .ds-system *,
+  .ds-system *::before,
+  .ds-system *::after { box-sizing: border-box; }
+
+  .ds-system .ds-container {
+    inline-size: 100%;
+    max-inline-size: var(--ds-shell);
+    margin-inline: auto;
+    padding-inline: var(--ds-gutter);
+  }
+
+  .ds-system .ds-section { padding-block: var(--ds-section-space); }
+  .ds-system .ds-section-head { margin-block-end: var(--ds-space-12); }
+  .ds-system .ds-stack { display: grid; gap: var(--ds-space-4); }
+
+  .ds-system :where(.ds-h1, .ds-h2, .ds-h3, .ds-body, .ds-lead, .ds-caption) {
+    margin-block: 0;
+    overflow-wrap: anywhere;
+  }
+  .ds-system .ds-h1 {
+    font-size: var(--ds-text-h1);
+    line-height: 1.12;
+    max-inline-size: 22ch;
+    letter-spacing: -0.01em;
+  }
+  .ds-system .ds-h2 {
+    font-size: var(--ds-text-h2);
+    line-height: 1.3;
+    max-inline-size: 28ch;
+  }
+  .ds-system .ds-h3 { font-size: var(--ds-text-h3); line-height: 1.3; }
+  .ds-system .ds-body { font-size: var(--ds-text-body); line-height: 1.6; }
+  .ds-system .ds-lead { font-size: var(--ds-text-lead); line-height: 1.6; }
+  .ds-system .ds-caption { font-size: var(--ds-text-caption); line-height: 1.5; }
+  .ds-system .ds-prose { max-inline-size: 62ch; }
+
+  .ds-system .ds-grid { display: grid; gap: var(--ds-grid-gap); }
+  .ds-system .ds-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ds-system .ds-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ds-system .ds-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .ds-system .ds-grid--tight { --ds-grid-gap: var(--ds-space-4); }
+  .ds-system .ds-grid > * { min-inline-size: 0; }
+  .ds-system .ds-card { display: grid; align-content: start; gap: var(--ds-space-3); }
+  .ds-system .ds-card-media { aspect-ratio: 3 / 2; overflow: hidden; border-radius: var(--ds-card-radius); }
+  .ds-system .ds-card-media > :is(img, video) { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
+  .ds-system .ds-card-title { font-size: var(--ds-text-body); line-height: 1.4; margin: 0; overflow-wrap: anywhere; }
+
+  .ds-system .ds-actions,
+  .ds-system .ds-header-row,
+  .ds-system .ds-nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--ds-space-6); }
+  .ds-system .ds-header-row { justify-content: space-between; padding-block: var(--ds-space-4); }
+  .ds-system .ds-logo { display: block; inline-size: calc(10 * var(--ds-u)); max-inline-size: 100%; block-size: auto; }
+  .ds-system .ds-nav { font-size: var(--ds-text-caption); }
+  .ds-system .ds-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    min-block-size: max(2.75rem, calc(3 * var(--ds-u)));
+    max-inline-size: 100%;
+    padding: var(--ds-space-3) var(--ds-space-6);
+    font-family: inherit;
+    font-size: var(--ds-text-body);
+    line-height: 1.3;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .ds-system .ds-button :where(svg) { inline-size: 1em; block-size: 1em; flex: none; }
+  .ds-system .ds-hero { display: grid; align-items: center; min-block-size: calc(36 * var(--ds-u)); padding-block: var(--ds-space-24); }
+  .ds-system :where(input, select, textarea) { font: inherit; max-inline-size: 100%; }
+
+  /* Text-size option for this deliberately proportional type preset.
+   * Include text-size-controls.js and the sample controls in SOP.md.
+   * This preserves an independent route to 200% text enlargement.
+   */
+  .ds-system [data-ds-text-scale][aria-pressed="true"] { outline: 2px solid currentColor; outline-offset: 2px; }
+}

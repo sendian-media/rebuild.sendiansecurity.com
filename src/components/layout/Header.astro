@@ -1,0 +1,16 @@
+---
+import { navigation } from '@/data/navigation';
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" aria-label="Sendian Security home"><img class="header-logo" src="/images/home/logo-header.png" alt="Sendian Integrated Security Services" width="150" height="50" /></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      {navigation.map(({ href, label }) => {
+        const current = href.startsWith('#') ? false : href === '/' ? Astro.url.pathname === '/' : Astro.url.pathname.startsWith(href);
+        return <a href={href} aria-current={current ? 'page' : undefined}>{label}</a>;
+      })}
+    </nav>
+    <div class="header-actions"><span class="linkedin" aria-label="LinkedIn">in</span><a class="vendor-link" href="/vendor-registration">Vendor registration</a></div>
+  </div>
+</header>

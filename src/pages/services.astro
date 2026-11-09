@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { services } from '@/data/services';
+
+const { hero, intro, bands, stats } = services;
+---
+
+<BaseLayout title="Services — Sendian Security" description="Integrated security, infrastructure, parking, communication, audio-visual and maintenance solutions from SISS, an MOI-approved provider in Qatar." socialImage={hero.image} bodyClass="page-services">
+  <section class="sv-hero">
+    <div class="container sv-hero-inner">
+      <h1>{hero.title}</h1>
+      <p class="sv-hero-sub">{hero.description}</p>
+      <a class="sv-cta" href={hero.cta.href}>{hero.cta.label}</a>
+    </div>
+  </section>
+
+  <section class="sv-intro">
+    <div class="container sv-intro-grid">
+      <p class="eyebrow">{intro.eyebrow}</p>
+      <div>
+        <h2>{intro.heading}</h2>
+        <p class="sv-intro-desc">{intro.description}</p>
+      </div>
+    </div>
+  </section>
+
+  {bands.map((band) => (
+    <section class:list={['sv-band', { 'sv-band-dark': band.theme === 'dark' }]}>
+      <div class="container sv-band-grid">
+        <div class="sv-band-head">
+          <p class="eyebrow">{band.eyebrow}</p>
+          <h2>{band.heading}</h2>
+          <p class="sv-band-desc">{band.description}</p>
+        </div>
+        <div class="sv-cards">
+          {band.items.map((item) => (
+            <article class="sv-card">
+              <p class="sv-card-cat">{item.category}</p>
+              <h3>{item.title}</h3>
+              <p class="sv-card-desc">{item.description}</p>
+              <a class="sv-card-link" href="/#contact">Learn more <span aria-hidden="true">→</span></a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="sv-stats" aria-label="Sendian in numbers">
+    <div class="container sv-stats-grid">
+      {stats.map(([value, label]) => <div class="sv-stat"><strong>{value}</strong><span>{label}</span></div>)}
+    </div>
+  </section>
+</BaseLayout>

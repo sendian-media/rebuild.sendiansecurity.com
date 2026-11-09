@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Certifications from '../components/home/Certifications.astro';
+import Contact from '../components/home/Contact.astro';
+import { home } from '@/data/home';
+
+const pillars = [
+  {
+    number: '01',
+    title: 'Integrated by Design',
+    body: 'SISS operates on an integration-first model, ensuring that security, infrastructure, communication, and automation systems function as a unified ecosystem rather than isolated components. This approach improves operational efficiency, simplifies management, and ensures long-term system reliability.',
+  },
+  {
+    number: '02',
+    title: 'Lifecycle Responsibility',
+    body: 'Our responsibility extends beyond installation. SISS provides ongoing support, maintenance, upgrades, and system optimization, ensuring consistent performance and operational continuity.',
+  },
+  {
+    number: '03',
+    title: 'Built on Capability and Stability',
+    body: 'With established engineering teams, structured project delivery processes, and the backing of Sendian Group, SISS maintains the capacity to execute and support projects of varying scale and complexity across Qatar.',
+  },
+];
+
+const capabilities = [
+  { number: '01', title: 'Security & Surveillance Systems', body: 'Comprehensive surveillance and access control architectures designed to support operational safety and regulatory compliance.' },
+  { number: '02', title: 'Infrastructure & Data Systems', body: 'Structured cabling, data center environments, storage systems, and network backbone infrastructure supporting enterprise operations.' },
+  { number: '03', title: 'Parking & Mobility Systems', body: 'Integrated parking management, vehicle access control, and automated mobility solutions.' },
+  { number: '04', title: 'Network & Communication Systems', body: 'Enterprise-grade networking, unified communications, and secure connectivity platforms.' },
+  { number: '05', title: 'Automation & Smart Environment Systems', body: 'Integrated automation systems enabling centralized control of operational and environmental functions.' },
+  { number: '06', title: 'Audio-Visual & Monitoring Systems', body: 'Professional AV solutions, video walls, and centralized monitoring environments for operational visibility.' },
+];
+---
+
+<BaseLayout title="About us — Sendian Security" description="Qatar-based systems integrator for security, ELV, ICT and automation." socialImage={home.hero.image} bodyClass="page-about">
+  <section class="ab-hero">
+    <div class="container">
+      <nav class="ab-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">About</span></nav>
+      <h1>About us</h1>
+      <p class="ab-hero-sub">Qatar-based systems integrator for security, ELV, ICT and automation.</p>
+    </div>
+  </section>
+
+  <section class="ab-who">
+    <div class="container ab-who-grid">
+      <p class="ab-who-label">Who we are.</p>
+      <div class="ab-who-main">
+        <h2>SISS delivers <span class="hl">integrated security, ELV, ICT and automation</span> solutions for modern developments and infrastructure.</h2>
+        <p>For more than 14 years, SISS has supported residential, commercial, and institutional projects through structured engineering, disciplined execution, and long-term operational support.</p>
+        <a class="button button-blue button-ab" href="/">Discover Sendian <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ab-pillars">
+    <div class="container">
+      <p class="eyebrow">The SISS approach</p>
+      <h2>Smart Security Through Integrated Excellence System</h2>
+      <div class="ab-pillars-grid">
+        {pillars.map((pillar) => (
+          <article class="ab-pillar">
+            <p class="ab-pillar-num">{pillar.number}</p>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="ab-vision">
+    <div class="ab-vision-half">
+      <p class="eyebrow eyebrow-light">Our vision</p>
+      <p class="ab-vision-vol">To be a leading integrated security and ELV systems partner supporting the development of intelligent, secure, and connected environments across Qatar.</p>
+    </div>
+    <div class="ab-vision-half ab-vision-half-blue">
+      <p class="eyebrow eyebrow-pale">Our mission</p>
+      <p class="ab-vision-vol">To deliver reliable, scalable, and integrated technology solutions through disciplined engineering, structured execution, and long-term client partnerships.</p>
+    </div>
+  </section>
+
+  <section class="ab-caps">
+    <div class="container">
+      <p class="eyebrow">Why choose us</p>
+      <h2>Integrated Capability Framework</h2>
+      <div class="ab-caps-grid">
+        {capabilities.map((capability) => (
+          <article class="ab-cap">
+            <h3 class="ab-cap-head"><span class="ab-cap-num" aria-hidden="true">{capability.number}</span>{capability.title}</h3>
+            <p class="ab-cap-body">{capability.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Certifications />
+
+  <Contact
+    eyebrow="Start a conversation"
+    heading="Ready to discuss your requirements?"
+    sub="Our team is ready to help you plan a secure, integrated solution."
+  />
+</BaseLayout>

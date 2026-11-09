@@ -1,0 +1,32 @@
+---
+import Header from '@/components/layout/Header.astro';
+import Footer from '@/components/layout/Footer.astro';
+import SeoHead from '@/components/seo/SeoHead.astro';
+import TextSize from '@/components/home/TextSize.astro';
+import '@/styles/global.css';
+import '@/styles/desktop-pages.css';
+
+interface Props {
+  title: string;
+  description: string;
+  socialImage: string;
+  bodyClass?: string;
+}
+
+const { title, description, socialImage, bodyClass } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <SeoHead title={title} description={description} socialImage={socialImage} />
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer><TextSize /></Footer>
+  </body>
+</html>

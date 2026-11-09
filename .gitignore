@@ -1,0 +1,9 @@
+node_modules/
+.astro/
+dist/
+archive/
+.env*
+!.env.example
+.DS_Store
+.pi/
+.mcp.json
