@@ -4,29 +4,37 @@ A new website in progress, with a homepage based on the approved Figma design. T
 
 ## Stack
 
-Astro 7, Tailwind CSS 4, React 19, and TypeScript, using the existing npm dependencies and lockfile without upgrades. The standalone Node adapter is retained: this is a server-output project, not a static-only deployment. Prefer Astro components; add React islands only when needed.
+Astro 7, Tailwind CSS 4, React 19, and TypeScript. The Vercel adapter builds server-rendered pages for Vercel; request-time portfolio industry filtering is preserved. Prefer Astro components; add React islands only when needed.
 
 Sanity and Portable Text packages remain installed for optional future use, but no service is connected. No credentials are required to check, build, or run this starter.
 
 ## Commands
 
-Use Node.js 22.12+ and npm.
+Use the latest Node.js 22.x (22.23.4+ for the installed React integration) and npm. CI and Vercel select the 22.x major.
 
 ```sh
 npm ci
 npm run dev
 npm run check
 npm run build
-npm run preview
-# Alternatively, run the built standalone server:
-npm start
+npm run test:build
 ```
 
-Development, preview, and start bind to `127.0.0.1:3888`. If that port is occupied, preview on a different local port:
+Development binds to `127.0.0.1:3888`. If that port is occupied, use `npm run dev -- --port 3889`. The Vercel adapter does not support `astro preview` or a standalone Node server; the old `preview` and `start` scripts have been removed. `test:build` invokes the generated Vercel function locally to check routes, portfolio filters, and bundled assets.
 
-```sh
-npm run preview -- --port 3889
-```
+## Vercel deployment
+
+- Framework preset: **Astro**
+- Root directory: repository root (`.`)
+- Install command: `npm ci`
+- Build command: `npm run build`
+- Output directory: leave the framework default; disable any custom override. The adapter generates `.vercel/output/` with static assets, server functions, and routing rules.
+- Node.js version: **22.x**
+- No start command is needed on Vercel.
+
+Set optional `SITE_URL=https://rebuild-sendiansecurity-com.vercel.app` for this staging deployment's canonical/sitemap origin. Otherwise it defaults to `https://sendiansecurity.com`. No credentials or external services are required.
+
+Redeploy after applying this configuration. The former `@astrojs/node` standalone output was not Vercel-compatible: it built successfully but left Vercel without page routes, causing `404 NOT_FOUND`. Keep `noindex` and the robots block for staging.
 
 ## Active files
 
@@ -39,8 +47,9 @@ npm run preview -- --port 3889
 - `src/layouts/BaseLayout.astro`: document shell, shared navigation, and main landmark.
 - `src/styles/global.css`: Tailwind entry point and homepage styles.
 - `public/`: local images and fonts. See `docs/figma-homepage-assets.md` for provenance.
-- `astro.config.mjs`: React, Tailwind, sitemap, and standalone Node configuration.
-- `.github/workflows/quality.yml`: check and build only; no deployment or CMS secrets.
+- `astro.config.mjs`: React, Tailwind, sitemap, and Vercel server-output configuration.
+- `tests/vercel-output.test.mjs`: production-output regression tests; run after building.
+- `.github/workflows/quality.yml`: check, build, and output tests only; no deployment or CMS secrets.
 
 The existing private `.env` is untouched and excluded from the backup and Git. The starter does not call CMS, email, forms, or analytics services. `.env.example` lists only the optional site URL setting.
 
