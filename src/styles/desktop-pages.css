@@ -117,15 +117,15 @@
   .page-services .sv-intro h2 { font-size: calc(34 * var(--ds-type-px)); line-height: calc(43 * var(--ds-px)); }
   .page-services .sv-intro-desc { margin-top: calc(23 * var(--ds-px)); font-size: calc(16 * var(--ds-type-px)); line-height: 1.625; }
   .page-services .sv-band { padding-block: calc(100 * var(--ds-px)); }
-  .page-services .sv-band-grid { gap: calc(20 * var(--ds-px)); }
+  .page-services .sv-band-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: calc(20 * var(--ds-px)); }
   .page-services .sv-band h2 { margin-top: calc(17 * var(--ds-px)); font-size: calc(30 * var(--ds-type-px)); line-height: calc(39 * var(--ds-px)); }
   .page-services .sv-band-desc { margin-top: calc(16 * var(--ds-px)); font-size: calc(14 * var(--ds-type-px)); line-height: calc(22 * var(--ds-px)); }
-  .page-services .sv-cards { gap: calc(24 * var(--ds-px)) calc(40 * var(--ds-px)); }
-  .page-services .sv-card { min-height: calc(330 * var(--ds-px)); padding: calc(22 * var(--ds-px)); border-radius: calc(12 * var(--ds-px)); }
-  .page-services .sv-card-cat { font-size: calc(10 * var(--ds-type-px)); line-height: 1.2; letter-spacing: .12em; }
-  .page-services .sv-card h3 { margin-top: calc(12 * var(--ds-px)); font-size: calc(18 * var(--ds-type-px)); line-height: calc(24 * var(--ds-px)); }
-  .page-services .sv-card-desc { margin-top: calc(12 * var(--ds-px)); font-size: calc(12.5 * var(--ds-type-px)); line-height: calc(19 * var(--ds-px)); }
-  .page-services .sv-card-link { padding-top: calc(20 * var(--ds-px)); font-size: calc(13 * var(--ds-type-px)); line-height: calc(20 * var(--ds-px)); }
+  .page-services .sv-cards { gap: calc(12 * var(--ds-px)); }
+  .page-services .sv-card-image { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .page-services .sv-card-content { min-height: calc(211 * var(--ds-px)); padding: calc(15 * var(--ds-px)) calc(30 * var(--ds-px)) calc(52 * var(--ds-px)); }
+  .page-services .sv-card h3 { margin: 0; color: #299cda; font-size: calc(20 * var(--ds-type-px)); line-height: 1.3; }
+  .page-services .sv-card-desc { margin-top: calc(20 * var(--ds-px)); font-size: calc(15 * var(--ds-type-px)); line-height: 1.5; }
+  .page-services .sv-card-link { min-height: max(44px, calc(38 * var(--ds-px))); margin-top: auto; padding: 0 calc(20 * var(--ds-px)); border-radius: calc(24 * var(--ds-px)); font-size: calc(13 * var(--ds-type-px)); line-height: 1.4; }
   .page-services .sv-stats-grid { gap: calc(24 * var(--ds-px)); }
   .page-services .sv-stat { padding-block: calc(22 * var(--ds-px)) calc(27 * var(--ds-px)); }
   .page-services .sv-stat strong { font-size: calc(52 * var(--ds-type-px)); line-height: calc(57 * var(--ds-px)); }

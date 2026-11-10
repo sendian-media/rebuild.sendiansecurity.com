@@ -3,8 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Metrics from '../components/home/Metrics.astro';
 import PageHero from '../components/layout/PageHero.astro';
 import { services } from '@/data/services';
+import { home } from '@/data/home';
 
 const { hero, intro, bands, stats } = services;
+const cardImages: Record<string, string> = {
+  'Security Solutions': home.solutions[0].image,
+  'Infrastructure Solutions': home.solutions[1].image,
+  'Parking Systems': home.solutions[2].image,
+  'Communication Solutions': home.solutions[3].image,
+  'Automation Solutions': home.solutions[3].image,
+  'Audio-Visual Solutions': home.solutions[3].image,
+  'Maintenance and Others': home.solutions[1].image,
+};
 ---
 
 <BaseLayout title="Services — Sendian Security" description="Integrated security, infrastructure, parking, communication, audio-visual and maintenance solutions from SISS, an MOI-approved provider in Qatar." socialImage={hero.image} bodyClass="page-services">
@@ -31,10 +41,12 @@ const { hero, intro, bands, stats } = services;
         <div class="sv-cards">
           {band.items.map((item) => (
             <article class="sv-card">
-              <p class="sv-card-cat">{item.category}</p>
-              <h3>{item.title}</h3>
-              <p class="sv-card-desc">{item.description}</p>
-              <a class="sv-card-link" href="/#contact">Learn more <span aria-hidden="true">→</span></a>
+              <img class="sv-card-image" src={cardImages[item.category]} alt="" width="800" height="950" loading="lazy" />
+              <div class="sv-card-content">
+                <h3>{item.title}</h3>
+                <p class="sv-card-desc">{item.description}</p>
+                <a class="sv-card-link" href="/#contact">Learn more <span aria-hidden="true">→</span></a>
+              </div>
             </article>
           ))}
         </div>
