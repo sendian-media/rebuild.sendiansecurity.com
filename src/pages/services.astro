@@ -3,17 +3,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Metrics from '../components/home/Metrics.astro';
 import PageHero from '../components/layout/PageHero.astro';
 import { services } from '@/data/services';
-import { home } from '@/data/home';
 
 const { hero, intro, bands, stats } = services;
+// One local image per service card; sources are documented in docs/research/convergint-com-services/references.md.
 const cardImages: Record<string, string> = {
-  'Security Solutions': home.solutions[0].image,
-  'Infrastructure Solutions': home.solutions[1].image,
-  'Parking Systems': home.solutions[2].image,
-  'Communication Solutions': home.solutions[3].image,
-  'Automation Solutions': home.solutions[3].image,
-  'Audio-Visual Solutions': home.solutions[3].image,
-  'Maintenance and Others': home.solutions[1].image,
+  'CCTV Surveillance': '/images/services/security-solutions.png',
+  'Access Control Solutions': '/images/services/access-control-reader.jpeg',
+  'Cyber Security Solutions': '/images/services/cyber-security-screen.jpeg',
+  'Structured Cabling System': '/images/services/infrastructure-solutions.png',
+  'Data Center Solution': '/images/services/data-center-racks.jpeg',
+  'Storage Solution': '/images/services/storage-array.jpeg',
+  'Parking Management Systems': '/images/services/parking-management-entry.jpeg',
+  'Parking Guidance Systems': '/images/services/parking-guidance-arrows.jpeg',
+  'LPR Solutions': '/images/services/parking-systems.jpeg',
+  'Unified Communication': '/images/services/unified-communications-phone.jpeg',
+  'Enterprise Network Solutions': '/images/services/enterprise-network-switch.jpeg',
+  'Home Automation Systems': '/images/services/home-automation-control.jpeg',
+  'Audio Visual Systems': '/images/services/audio-visual-microphone.jpeg',
+  'Video Solutions': '/images/services/video-solutions-conference.jpeg',
+  'Annual Maintenance Contracts': '/images/services/other-solutions.png',
+  'Intercom System': '/images/services/intercom-system.jpeg',
+  'Smart WiFi Solution': '/images/services/wifi-router.jpeg',
+  'Cloud Solutions': '/images/services/cloud-solutions.jpeg',
 };
 ---
 
@@ -41,7 +52,7 @@ const cardImages: Record<string, string> = {
         <div class="sv-cards">
           {band.items.map((item) => (
             <article class="sv-card">
-              <img class="sv-card-image" src={cardImages[item.category]} alt="" width="800" height="950" loading="lazy" />
+              <img class="sv-card-image" src={cardImages[item.title]} alt="" width="1408" height="768" loading="lazy" />
               <div class="sv-card-content">
                 <h3>{item.title}</h3>
                 <p class="sv-card-desc">{item.description}</p>
