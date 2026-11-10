@@ -2,8 +2,7 @@ export const services = {
   hero: {
     image: '/images/services/services-banner.jpg',
     title: 'Services',
-    description:
-      'Ministry of Interior-approved security solutions provider. Protecting Qatar’s infrastructure with cutting-edge CCTV, access control, and enterprise security systems for more than a decade.',
+    description: 'MOI-approved provider of CCTV, access control and enterprise security systems across Qatar.',
     cta: { href: '/vendor-registration', label: 'Vendor registration' },
   },
   intro: {

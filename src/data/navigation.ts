@@ -4,7 +4,7 @@ export const navigation = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/news', label: 'News' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export const footerNavigation = [

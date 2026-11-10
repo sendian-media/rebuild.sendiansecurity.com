@@ -1,7 +1,13 @@
 ---
 import { home } from '@/data/home';
+
+interface Props {
+  metrics?: typeof home.metrics;
+}
+
+const { metrics = home.metrics } = Astro.props;
 ---
 
 <section class="metrics" aria-label="Sendian in numbers"><div class="container metrics-grid">
-  {home.metrics.map(([value, label]) => <div class="metric"><strong>{value}</strong><span>{label}</span></div>)}
+  {metrics.map(([value, label]) => <div class="metric"><strong>{value}</strong><span>{label}</span></div>)}
 </div></section>

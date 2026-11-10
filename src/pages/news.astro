@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/layout/PageHero.astro';
+import Contact from '../components/home/Contact.astro';
+import { news } from '@/data/news';
+---
+
+<BaseLayout title="News — Sendian Security" description="Updates from Sendian Integrated Security Services." socialImage={news[0].image} bodyClass="page-news">
+  <PageHero crumb="News" title="News" sub="Updates from Sendian Integrated Security Services." />
+
+  <section class="nw-section">
+    <div class="container">
+      <p class="eyebrow">News & updates</p>
+      <h2>Latest news and updates.</h2>
+      <div class="nw-grid">
+        {news.map((item) => (
+          <article class="nw-card">
+            <img src={item.image} alt={item.title} width="384" height="216" loading="lazy" />
+            <div class="nw-card-body">
+              <span class="nw-card-pill">{item.category}</span>
+              <h3>{item.title}</h3>
+              <p class="nw-card-date">{item.date}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Contact />
+</BaseLayout>

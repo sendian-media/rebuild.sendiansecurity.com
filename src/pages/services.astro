@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Metrics from '../components/home/Metrics.astro';
 import PageHero from '../components/layout/PageHero.astro';
 import { services } from '@/data/services';
 
@@ -41,9 +42,5 @@ const { hero, intro, bands, stats } = services;
     </section>
   ))}
 
-  <section class="sv-stats" aria-label="Sendian in numbers">
-    <div class="container sv-stats-grid">
-      {stats.map(([value, label]) => <div class="sv-stat"><strong>{value}</strong><span>{label}</span></div>)}
-    </div>
-  </section>
+  <Metrics metrics={stats} />
 </BaseLayout>
