@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import NewsDetail from '@/components/sites/sendian-news/NewsDetail.astro';
+import { news } from '@/data/news';
+import { articles } from '@/data/news-articles';
+
+const item = news.find((entry) => entry.slug === Astro.params.slug);
+if (!item || !articles[item.slug]) return Astro.redirect('/404');
+---
+
+<BaseLayout title={`${item.title} — Sendian Security`} description={articles[item.slug].summary} socialImage={item.image} article={{ headline: item.title, datePublished: new Date(`${item.date} UTC`).toISOString().slice(0, 10) }} bodyClass="page-news-detail">
+  <NewsDetail slug={item.slug} />
+</BaseLayout>

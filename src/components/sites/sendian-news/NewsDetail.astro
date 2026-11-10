@@ -1,0 +1,76 @@
+---
+import { news } from '@/data/news';
+import { articles } from '@/data/news-articles';
+
+interface Props { slug: string }
+const { slug } = Astro.props;
+const item = news.find((entry) => entry.slug === slug)!;
+const article = articles[slug];
+const related = news.filter((entry) => entry.slug !== slug).slice(0, 3);
+---
+
+<article class="detail container">
+  <div class="detail-grid">
+    <div class="detail-main">
+      <a class="back" href="/news">← All news</a>
+      <p class="category">{item.category}</p>
+      <h1>{item.title}</h1>
+      <p class="summary">{article.summary}</p>
+      <p class="date">{item.date}</p>
+      <img class="hero-image" src={item.image} alt={item.title} width="1600" height="900" />
+      <p class="topic">{article.topic}</p>
+      <div class="body-copy">
+        {article.sections.map((section, index) => (
+          <section>
+            {(section.heading || index === 0) && <h2>{section.heading || item.title}</h2>}
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </section>
+        ))}
+      </div>
+    </div>
+    <aside aria-labelledby="related-heading">
+      <p class="related-eyebrow">// Keep reading</p>
+      <h2 id="related-heading">Related news</h2>
+      <div class="related-list">
+        {related.map((entry) => (
+          <a class="related" href={`/news/${entry.slug}`}>
+            <img src={entry.image} alt="" width="160" height="120" loading="lazy" />
+            <span><span class="related-category">{entry.category}</span><strong>{entry.title}</strong><span class="related-date">{entry.date}</span></span>
+          </a>
+        ))}
+      </div>
+      <a class="all-news" href="/news">View all news →</a>
+    </aside>
+  </div>
+</article>
+
+<style>
+  .detail { padding-block: 80px 96px; }
+  .detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 64px; align-items: start; }
+  .back, .all-news { display: inline-block; color: var(--blue); font: 600 13px/1.5 Montserrat, sans-serif; }
+  .back { margin-bottom: 28px; }
+  .back:hover, .all-news:hover { text-decoration: underline; }
+  .category, .related-eyebrow, .related-category { color: #3b82f6; font: 600 12px/1.5 Montserrat, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+  h1 { margin-top: 16px; color: #1e293b; font-size: clamp(36px, 4.2vw, 60px); line-height: 1.12; letter-spacing: -.03em; }
+  .summary { margin-top: 24px; color: #526176; font-size: 18px; line-height: 1.65; }
+  .date { margin-top: 24px; color: #64748b; font-size: 14px; }
+  .hero-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; margin-top: 36px; }
+  .topic { display: inline-block; margin-top: 32px; padding: 10px 16px; border-radius: 24px; background: #eff6ff; color: #2563eb; font-size: 14px; line-height: 1.5; }
+  .body-copy { max-width: 72ch; margin-top: 32px; color: #475569; font-size: 17px; line-height: 1.8; }
+  .body-copy section + section { margin-top: 32px; }
+  .body-copy h2 { margin-bottom: 18px; color: #1e293b; font-size: 26px; line-height: 1.3; }
+  .body-copy p + p { margin-top: 20px; }
+  aside { border-top: 3px solid var(--blue); padding-top: 22px; }
+  aside h2 { margin-top: 10px; font-size: 25px; line-height: 1.25; }
+  .related-list { margin-top: 24px; }
+  .related { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding-block: 16px; border-top: 1px solid #e2e8f0; }
+  .related img { width: 96px; height: 72px; object-fit: cover; }
+  .related span span, .related strong { display: block; }
+  .related-category { font-size: 10px; letter-spacing: .08em; }
+  .related strong { margin-top: 6px; font: 600 13px/1.45 Montserrat, sans-serif; }
+  .related:hover strong { color: var(--blue); text-decoration: underline; }
+  .related-date { margin-top: 7px; color: #64748b; font-size: 12px; }
+  .all-news { margin-top: 12px; }
+  @media (max-width: 900px) { .detail-grid { grid-template-columns: 1fr; gap: 56px; } .detail { padding-block: 56px 72px; } }
+  @media (max-width: 480px) { .detail { padding-block: 40px 56px; } h1 { font-size: 34px; } .body-copy { font-size: 16px; } .body-copy h2 { font-size: 23px; } }
+</style>

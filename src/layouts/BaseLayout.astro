@@ -11,9 +11,10 @@ interface Props {
   description: string;
   socialImage: string;
   bodyClass?: string;
+  article?: { headline: string; datePublished: string };
 }
 
-const { title, description, socialImage, bodyClass } = Astro.props;
+const { title, description, socialImage, bodyClass, article } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +22,10 @@ const { title, description, socialImage, bodyClass } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <SeoHead title={title} description={description} socialImage={socialImage} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <SeoHead title={title} description={description} socialImage={socialImage} article={article} />
   </head>
   <body class={bodyClass}>
     <a class="skip-link" href="#main">Skip to content</a>

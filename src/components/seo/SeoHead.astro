@@ -1,20 +1,64 @@
 ---
+import { site as business } from '@/data/site';
+
 interface Props {
   title: string;
   description: string;
   socialImage: string;
+  article?: { headline: string; datePublished: string };
 }
 
-const { title, description, socialImage } = Astro.props;
+const { title, description, socialImage, article } = Astro.props;
 const site = Astro.site ?? new URL('https://sendiansecurity.com');
 const canonical = new URL(Astro.url.pathname, site).href;
 const image = new URL(socialImage, site).href;
+const organizationId = new URL('/#organization', site).href;
+const structuredData: Record<string, unknown>[] = [];
+if (Astro.url.pathname === '/') {
+  structuredData.push({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': organizationId,
+    name: business.name,
+    alternateName: 'SISS',
+    url: site.href,
+    logo: new URL('/images/home/logo-header.png', site).href,
+    telephone: business.phone,
+    email: business.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: business.address[0],
+      addressLocality: 'Doha',
+      addressCountry: 'QA',
+    },
+  }, {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: business.name,
+    url: site.href,
+  });
+}
+if (article) {
+  structuredData.push({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.headline,
+    description,
+    image,
+    datePublished: article.datePublished,
+    mainEntityOfPage: canonical,
+    publisher: { '@type': 'Organization', '@id': organizationId, name: business.name },
+  });
+}
+const jsonLd = (schema: Record<string, unknown>) => JSON.stringify(schema)
+  .replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026')
+  .replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={article ? 'article' : 'website'} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
@@ -25,3 +69,4 @@ const image = new URL(socialImage, site).href;
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
 <meta name="robots" content="noindex, nofollow" />
+{structuredData.map((schema) => <script type="application/ld+json" set:html={jsonLd(schema)} />)}

@@ -1,0 +1,10 @@
+---
+const legacyArticles = [
+  'ai-security-solutions-qatar',
+  'ongoing-project-cctv-surveillance-system-installation-at-qatar-finland-international-school',
+  'ongoing-project-moi-regulated-cctv-system-deployment-at-kreeq-sports-club-al-wakra',
+];
+const slug = Astro.params.slug;
+if (!slug || !legacyArticles.includes(slug)) return new Response('Not found', { status: 404 });
+return Astro.redirect(`/news/${slug}`, 301);
+---

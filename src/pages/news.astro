@@ -18,7 +18,7 @@ import { news } from '@/data/news';
             <img src={item.image} alt={item.title} width="384" height="216" loading="lazy" />
             <div class="nw-card-body">
               <span class="nw-card-pill">{item.category}</span>
-              <h3>{item.title}</h3>
+              <h3><a href={`/news/${item.slug}`}>{item.title}</a></h3>
               <p class="nw-card-date">{item.date}</p>
             </div>
           </article>
