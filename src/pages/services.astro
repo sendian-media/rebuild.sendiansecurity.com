@@ -1,18 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/layout/PageHero.astro';
 import { services } from '@/data/services';
 
 const { hero, intro, bands, stats } = services;
 ---
 
 <BaseLayout title="Services — Sendian Security" description="Integrated security, infrastructure, parking, communication, audio-visual and maintenance solutions from SISS, an MOI-approved provider in Qatar." socialImage={hero.image} bodyClass="page-services">
-  <section class="sv-hero">
-    <div class="container sv-hero-inner">
-      <h1>{hero.title}</h1>
-      <p class="sv-hero-sub">{hero.description}</p>
-      <a class="sv-cta" href={hero.cta.href}>{hero.cta.label}</a>
-    </div>
-  </section>
+  <PageHero crumb="Services" title={hero.title} sub={hero.description} />
 
   <section class="sv-intro">
     <div class="container sv-intro-grid">

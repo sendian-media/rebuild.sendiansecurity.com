@@ -1,5 +1,7 @@
 # All-page desktop scaling verification
 
+> Historical 1200px-shell evidence. See [width-1440/validation.md](width-1440/validation.md) for the current approved width and preserved shared-hero design.
+
 ## Scope and baseline
 
 Existing routes are `/`, `/about`, and `/portfolio` (including its industry query views). The user requested the previously approved home scaling rule across all of them. About and Portfolio retain their own measured 1920px compositions; desktop content width is 1200px, with no fixed upper cap. Header, footer, contact and text-size controls scale as well. Existing rules below 1280px are unchanged.

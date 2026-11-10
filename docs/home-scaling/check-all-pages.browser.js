@@ -9,12 +9,16 @@ window.checkDesktopPage = async () => {
   const textScale = Number(document.body.style.getPropertyValue('--ds-user-text-scale') || 1);
   assert(innerWidth >= 1280, 'Desktop viewport required');
   assert(document.documentElement.scrollWidth <= innerWidth, 'Horizontal document overflow');
-  near(document.querySelector('.container').getBoundingClientRect().width, 1200 * scale, 'Container');
+  for (const container of document.querySelectorAll('.container')) {
+    near(container.getBoundingClientRect().width, 1440 * scale, 'Container');
+  }
   const about = document.body.classList.contains('page-about');
   const portfolio = document.body.classList.contains('page-portfolio');
   const home = document.body.classList.contains('page-home');
-  assert(about || portfolio || home, 'Unknown page');
-  near(parseFloat(style('h1').fontSize), (about ? 56 : portfolio ? 72 : 64) * scale * textScale, 'H1');
+  const services = document.body.classList.contains('page-services');
+  assert(about || portfolio || home || services, 'Unknown page');
+  // Preserve the current fixed-size PageHero on Portfolio/Services; this change only widens shells.
+  near(parseFloat(style('h1').fontSize), (home ? 64 : 56) * (home || about ? scale * textScale : 1), 'H1');
   if (about) {
     assert(style('.ab-pillars-grid').gridTemplateColumns.split(' ').length === 3, 'About pillars');
     assert(style('.ab-caps-grid').gridTemplateColumns.split(' ').length === 2, 'About capabilities');

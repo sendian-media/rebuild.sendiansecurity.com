@@ -75,6 +75,7 @@ Paths below are relative to this repository root:
 - `src/styles/home-desktop.css`: implemented home-only 1920px reference.
 - `src/components/home/TextSize.astro`: tested text controls and header measurement.
 - `docs/home-scaling/check.browser.js`: project-specific browser assertions; adapt selectors/values before reuse.
-- `docs/home-scaling/validation.md`: measurements, evidence, boundary behavior and image-resolution limits.
+- `docs/home-scaling/width-1440/validation.md`: latest approved shell—1440px at 1920px (75%) across all four pages; preserve this rather than reinstating the illustrative 1200px examples.
+- `docs/home-scaling/validation.md`: original measurements, boundary behavior and image-resolution limits.
 
 The sibling `Desktop_Responsive_Scaling_SOP/` is the earlier **capped** proposal. Do not copy its curve into an uncapped implementation or treat its illustrative portfolio counts as this home page's approved composition.

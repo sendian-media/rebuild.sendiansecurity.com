@@ -9,7 +9,7 @@
     --ds-u: calc(100vw / 120);
     --ds-px: calc(var(--ds-u) / 16);
     --ds-type-px: calc(var(--ds-px) * var(--ds-user-text-scale, 1));
-    --ds-shell: calc(1200 * var(--ds-px));
+    --ds-shell: calc(1440 * var(--ds-px));
     --ds-grid-gap: calc(24 * var(--ds-px));
     --ds-text-h1: calc(64 * var(--ds-type-px));
     --ds-text-h2: calc(45 * var(--ds-type-px));

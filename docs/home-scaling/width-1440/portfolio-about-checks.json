@@ -1,0 +1,916 @@
+[
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1280",
+      "800"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 800,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1280
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/portfolio",
+      "result": {
+        "container": 960,
+        "h1": 56,
+        "ok": true,
+        "route": "/portfolio",
+        "textScale": 1,
+        "width": 1280
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1536",
+      "960"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 960,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1536
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/portfolio",
+      "result": {
+        "container": 1152,
+        "h1": 56,
+        "ok": true,
+        "route": "/portfolio",
+        "textScale": 1,
+        "width": 1536
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "2560",
+      "1440"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1440,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 2560
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/portfolio",
+      "result": {
+        "container": 1920,
+        "h1": 56,
+        "ok": true,
+        "route": "/portfolio",
+        "textScale": 1,
+        "width": 2560
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "3840",
+      "2160"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 2160,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 3840
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/portfolio",
+      "result": {
+        "container": 2880,
+        "h1": 56,
+        "ok": true,
+        "route": "/portfolio",
+        "textScale": 1,
+        "width": 3840
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1920",
+      "1080"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1080,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1920
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/farsin/sendiangroup/sendiansecurity.com/docs/home-scaling/width-1440/portfolio-1920.png"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "path": "/Users/farsin/sendiangroup/sendiansecurity.com/docs/home-scaling/width-1440/portfolio-1920.png"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/about"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "About us — Sendian Security",
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(0,eval)(sessionStorage.getItem('widthCheck'))"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        "container": 1440,
+        "h1": 56,
+        "ok": true,
+        "route": "/about",
+        "textScale": 1,
+        "width": 1920
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1280",
+      "800"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 800,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1280
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        "container": 960,
+        "h1": 37.3333,
+        "ok": true,
+        "route": "/about",
+        "textScale": 1,
+        "width": 1280
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "3840",
+      "2160"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 2160,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 3840
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        "container": 2880,
+        "h1": 112,
+        "ok": true,
+        "route": "/about",
+        "textScale": 1,
+        "width": 3840
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1920",
+      "1080"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1080,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1920
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/farsin/sendiangroup/sendiansecurity.com/docs/home-scaling/width-1440/about-1920.png"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "path": "/Users/farsin/sendiangroup/sendiansecurity.com/docs/home-scaling/width-1440/about-1920.png"
+    },
+    "success": true
+  }
+]

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/layout/PageHero.astro';
 import Contact from '../components/home/Contact.astro';
 import { hero, industries, projects, type IndustrySlug } from '@/data/portfolio';
 
@@ -14,14 +15,7 @@ const description = 'Explore Sendian Security projects across Qatar.';
 ---
 
 <BaseLayout title={title} description={description} socialImage={hero.image} bodyClass="page-portfolio">
-  <section class="pf-hero">
-    <div class="container pf-hero-inner">
-      <p class="pf-eyebrow">Our portfolio</p>
-      <h1>Projects that<br />connect and protect.</h1>
-      <p class="pf-hero-sub">Explore Sendian Security projects across Qatar.</p>
-      <nav class="pf-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{active ? active.name : 'Portfolio'}</span></nav>
-    </div>
-  </section>
+  <PageHero crumb={active ? active.name : 'Portfolio'} title="Our portfolio" sub="Projects that connect and protect." />
 
   <section class="pf-filters" aria-label="Explore by industry">
     <div class="container">

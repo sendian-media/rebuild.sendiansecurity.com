@@ -1,0 +1,259 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1920",
+      "1080"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 1080,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1920
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/services"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "Sendian Security — Integrated security solutions in Qatar",
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(async()=>{const {default:source}=await import('/@fs/Users/farsin/sendiangroup/sendiansecurity.com/docs/home-scaling/check.browser.js?raw&width1440');await (0,eval)(source);document.getAnimations().forEach(a=>{if(a.effect?.getComputedTiming().iterations===Infinity)a.pause();else a.finish()});return await checkHomeScaling()})()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "columns": {
+          ".certificates-grid": 5,
+          ".metrics-grid": 4,
+          ".process-grid": 5,
+          ".projects-grid": 3,
+          ".solutions-grid": 4,
+          ".trust-grid": 3
+        },
+        "container": 1440,
+        "dpr": 1,
+        "headerHeight": 92,
+        "height": 1080,
+        "heroHeight": 720,
+        "heroType": 64,
+        "pass": "[REDACTED]",
+        "textScale": 1,
+        "width": 1920
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/farsin/sendiangroup/sendiansecurity.com/docs/home-scaling/width-1440/home-1920.png"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "path": "/Users/farsin/sendiangroup/sendiansecurity.com/docs/home-scaling/width-1440/home-1920.png"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "3840",
+      "2160"
+    ],
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 2160,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 3840
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkHomeScaling()"
+    ],
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "columns": {
+          ".certificates-grid": 5,
+          ".metrics-grid": 4,
+          ".process-grid": 5,
+          ".projects-grid": 3,
+          ".solutions-grid": 4,
+          ".trust-grid": 3
+        },
+        "container": 2880,
+        "dpr": 1,
+        "headerHeight": 184,
+        "height": 2160,
+        "heroHeight": 1440,
+        "heroType": 128,
+        "pass": "[REDACTED]",
+        "textScale": 1,
+        "width": 3840
+      }
+    },
+    "success": true
+  }
+]

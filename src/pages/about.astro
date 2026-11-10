@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/layout/PageHero.astro';
 import Certifications from '../components/home/Certifications.astro';
 import Contact from '../components/home/Contact.astro';
 import { home } from '@/data/home';
@@ -33,13 +34,7 @@ const capabilities = [
 ---
 
 <BaseLayout title="About us — Sendian Security" description="Qatar-based systems integrator for security, ELV, ICT and automation." socialImage={home.hero.image} bodyClass="page-about">
-  <section class="ab-hero">
-    <div class="container">
-      <nav class="ab-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">About</span></nav>
-      <h1>About us</h1>
-      <p class="ab-hero-sub">Qatar-based systems integrator for security, ELV, ICT and automation.</p>
-    </div>
-  </section>
+  <PageHero crumb="About" title="About us" sub="Qatar-based systems integrator for security, ELV, ICT and automation." />
 
   <section class="ab-who">
     <div class="container ab-who-grid">

@@ -27,15 +27,6 @@ h1,h2,h3,.eyebrow,.button,.text-link,.main-nav,.header-actions,.metric{font-fami
 @media(prefers-reduced-motion:no-preference){.main-nav a::after{transition:transform .25s cubic-bezier(.2,.75,.25,1)}}
 @media(max-width:800px){.main-nav a::after{top:calc(100% + 2px)}}
 .pf-eyebrow{font:600 11px/17px Montserrat,Arial,sans-serif;letter-spacing:.19em;text-transform:uppercase;color:var(--blue)}.pf-eyebrow-muted{color:var(--muted)}
-.pf-hero{position:relative;isolation:isolate;overflow:hidden;background:var(--navy);color:#fff}
-.pf-hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url('/sites/sendiansecurity-com/portfolio/projects/ghanem-office-building.jpg');background-size:cover;background-position:center 30%}
-.pf-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,22,41,.96) 0%,rgba(7,22,41,.8) 60%,rgba(7,22,41,.2) 100%)}
-.pf-hero-inner{display:flex;flex-direction:column;align-items:flex-start;min-height:550px;padding-block:56px 62px}
-.pf-eyebrow-light{color:#b3cde6}
-.pf-hero .pf-eyebrow{color:#b3cde6}
-.pf-hero h1{margin-top:30px;font-size:72px;line-height:79px;font-weight:700;letter-spacing:-.02em}
-.pf-hero-sub{margin-top:46px;font-size:19px;line-height:29px;color:#e0e9f4}
-.pf-breadcrumb{margin-top:auto;display:flex;gap:10px;font-size:13px;line-height:20px;color:#e0e9f4}.pf-breadcrumb a:hover{text-decoration:underline}
 .pf-filters{padding-block:21px 39px;background:#fff}
 .pf-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .pf-chip{display:inline-flex;align-items:center;min-height:38px;padding:0 17px;border:1px solid #dee6f0;background:#fff;font:600 12px/17px Montserrat,Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
@@ -55,9 +46,9 @@ h1,h2,h3,.eyebrow,.button,.text-link,.main-nav,.header-actions,.metric{font-fami
 .pf-card h4{margin-top:17px;font-size:20px;line-height:26px;font-weight:700;letter-spacing:-.01em}
 .pf-card.pf-w-mid h4,.pf-card.pf-w-wide h4{font-size:24px;line-height:31px}
 .pf-scope{margin-top:12px;font-size:14px;line-height:21px;color:var(--muted)}
-@media(max-width:1240px){.pf-w-std,.pf-w-wide{width:calc((100% - 24px)/2)}.pf-w-mid{width:calc((100% - 24px)/2)}.pf-hero h1{font-size:clamp(44px,6vw,72px);line-height:1.1}.pf-hero-sub{margin-top:60px}}
-@media(max-width:800px){.pf-w-std,.pf-w-mid,.pf-w-wide{width:100%}.pf-grid{gap:40px}.pf-hero-inner{min-height:440px;padding-block:48px 48px}.pf-hero h1{margin-top:20px}.pf-hero-sub{margin-top:44px}.pf-breadcrumb{margin-top:60px}.pf-chip{min-height:36px;padding:0 14px;font-size:11px}.pf-register{padding-block:40px 64px}.pf-filters{padding-block:16px 28px}}
-@media(max-width:480px){.pf-hero h1{font-size:40px}.pf-hero br{display:none}.pf-hero-sub{font-size:17px}}
+@media(max-width:1240px){.pf-w-std,.pf-w-wide{width:calc((100% - 24px)/2)}.pf-w-mid{width:calc((100% - 24px)/2)}}
+@media(max-width:800px){.pf-w-std,.pf-w-mid,.pf-w-wide{width:100%}.pf-grid{gap:40px}.pf-chip{min-height:36px;padding:0 14px;font-size:11px}.pf-register{padding-block:40px 64px}.pf-filters{padding-block:16px 28px}}
+
 
 /* About page (src/pages/about.astro) — Sendian · About Us (Figma SISS 56:1709) */
 .ab-breadcrumb{display:flex;gap:8px;font-size:13px;line-height:20px;color:#c3cedd}.ab-breadcrumb a:hover{text-decoration:underline}
@@ -95,14 +86,6 @@ h1,h2,h3,.eyebrow,.button,.text-link,.main-nav,.header-actions,.metric{font-fami
 @media(max-width:480px){.ab-hero h1{font-size:40px}.ab-hero-sub{font-size:17px}.ab-who h2{font-size:28px}}
 
 /* Services page (src/pages/services.astro) — Sendian · Services page × convergint-inspired (Figma SISS 58:2079) */
-.sv-hero{position:relative;isolation:isolate;overflow:hidden;background:var(--navy);color:#fff}
-.sv-hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url('/images/services/services-banner.jpg');background-size:cover;background-position:center}
-.sv-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.08) 90%)}
-.sv-hero-inner{display:flex;flex-direction:column;align-items:flex-start;min-height:600px;padding-block:138px 66px}
-.sv-hero h1{font-size:64px;line-height:67px;font-weight:700;letter-spacing:-.03125em}
-.sv-hero-sub{margin-top:47px;max-width:640px;font-size:16px;line-height:26px;color:rgba(255,255,255,.85)}
-.sv-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:230px;max-inline-size:100%;border-radius:24px;background:#478bea;color:#fff;font:600 14px/21px Montserrat,Arial,sans-serif}
-.sv-cta:hover{filter:brightness(.93)}
 .sv-intro{background:#fff;padding-block:64px 160px}
 .sv-intro-grid{display:grid;grid-template-columns:380fr 800fr;gap:20px;align-items:start}
 .sv-intro-grid>.eyebrow{margin-top:20px}
@@ -128,5 +111,5 @@ h1,h2,h3,.eyebrow,.button,.text-link,.main-nav,.header-actions,.metric{font-fami
 .sv-stat{border-top:1px solid #dee6f0;padding-block:22px 27px}
 .sv-stat strong{display:block;font-size:52px;line-height:57px;font-weight:700}
 .sv-stat span{display:block;margin-top:19px;font:600 16px/21px Montserrat,Arial,sans-serif}
-@media(max-width:1024px){.sv-hero-inner{min-height:0;padding-block:80px 56px}.sv-intro{padding-block:56px 80px}.sv-intro-grid,.sv-band-grid{grid-template-columns:1fr;gap:0}.sv-intro-grid>.eyebrow,.sv-band h2,.sv-band-desc{margin-top:0}.sv-band h2{margin-top:17px}.sv-band-desc{margin-top:16px}.sv-band{padding-block:64px}.sv-cards{margin-top:40px;grid-template-columns:repeat(2,1fr);gap:20px}.sv-card{min-height:0}.sv-card-link{padding-top:28px}.sv-stat strong{font-size:40px;line-height:1.15}.sv-stat span{margin-top:12px;font-size:14px;line-height:1.3}}
-@media(max-width:560px){.sv-hero h1{font-size:44px;line-height:1.1}.sv-hero-sub{margin-top:28px;font-size:15px}.sv-cta{margin-top:40px;width:100%}.sv-cards{grid-template-columns:1fr}.sv-stats-grid{grid-template-columns:1fr 1fr;gap:20px 16px}.sv-stat{padding-block:16px 0}.sv-stat strong{font-size:30px}}
+@media(max-width:1024px){.sv-intro{padding-block:56px 80px}.sv-intro-grid,.sv-band-grid{grid-template-columns:1fr;gap:0}.sv-intro-grid>.eyebrow,.sv-band h2,.sv-band-desc{margin-top:0}.sv-band h2{margin-top:17px}.sv-band-desc{margin-top:16px}.sv-band{padding-block:64px}.sv-cards{margin-top:40px;grid-template-columns:repeat(2,1fr);gap:20px}.sv-card{min-height:0}.sv-card-link{padding-top:28px}.sv-stat strong{font-size:40px;line-height:1.15}.sv-stat span{margin-top:12px;font-size:14px;line-height:1.3}}
+@media(max-width:560px){.sv-cards{grid-template-columns:1fr}.sv-stats-grid{grid-template-columns:1fr 1fr;gap:20px 16px}.sv-stat{padding-block:16px 0}.sv-stat strong{font-size:30px}}

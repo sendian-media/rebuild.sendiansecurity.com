@@ -7,7 +7,7 @@
     --ds-type-px: calc(var(--ds-px) * var(--ds-user-text-scale, 1));
     font-size: calc(16 * var(--ds-type-px));
   }
-  :is(.page-about, .page-portfolio, .page-services) .container { width: calc(1200 * var(--ds-px)); max-width: none; }
+  :is(.page-about, .page-portfolio, .page-services) .container { width: calc(1440 * var(--ds-px)); max-width: none; }
   :is(.page-about, .page-portfolio, .page-services) :where(h1, h2, h3, h4, p, a, span) { overflow-wrap: anywhere; }
   :is(.page-about, .page-portfolio, .page-services) :where(.footer-grid > *, .certificates-grid > *, .ab-who-grid > *, .ab-pillars-grid > *, .ab-caps-grid > *, .pf-card, .sv-cards > *) { min-inline-size: 0; }
   :is(.page-about, .page-portfolio, .page-services) .skip-link { left: calc(12 * var(--ds-px)); padding: calc(12 * var(--ds-px)); }

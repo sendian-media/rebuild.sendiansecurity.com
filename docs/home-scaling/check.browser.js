@@ -12,7 +12,9 @@ window.checkHomeScaling = async () => {
   assert(width >= 1280, 'This check covers the desktop scaling layout.');
   assert(document.body.classList.contains('page-home'), 'Home-only scope is missing.');
   assert(document.documentElement.scrollWidth <= width, 'Document overflows horizontally.');
-  close(document.querySelector('.container').getBoundingClientRect().width, 1200 * scale, 'Container');
+  for (const container of document.querySelectorAll('.container')) {
+    close(container.getBoundingClientRect().width, 1440 * scale, 'Container');
+  }
   close(parseFloat(style('.hero h1').fontSize), 64 * scale * textScale, 'Hero type');
   close(parseFloat(style('.about h2').fontSize), 45 * scale * textScale, 'Section type');
   close(parseFloat(style('.solutions-grid').gap), 24 * scale, 'Grid gap');

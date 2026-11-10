@@ -1,5 +1,7 @@
 # Home desktop scaling verification
 
+> Historical 1200px-shell evidence. The current approved 1440px shell is documented in [width-1440/validation.md](width-1440/validation.md).
+
 ## Approved rule
 
 The user selected the first supplied screenshot's proportions, superseding the SOP's capped 1440px preset **for the home page only**.

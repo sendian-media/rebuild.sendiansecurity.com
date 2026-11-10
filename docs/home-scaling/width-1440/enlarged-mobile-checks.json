@@ -1,0 +1,965 @@
+[
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/about"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "About us — Sendian Security",
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(0,eval)(sessionStorage.getItem('widthCheck'))"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        "container": 1440,
+        "h1": 56,
+        "ok": true,
+        "route": "/about",
+        "textScale": 1,
+        "width": 1920
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "document.querySelector('.home-text-size').open=true;document.querySelector('[data-ds-text-scale=\"2\"]').click()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": null
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        "container": 1440,
+        "h1": 112,
+        "ok": true,
+        "route": "/about",
+        "textScale": 2,
+        "width": 1920
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1280",
+      "800"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 800,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 1280
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        "container": 960,
+        "h1": 74.6667,
+        "ok": true,
+        "route": "/about",
+        "textScale": 2,
+        "width": 1280
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/portfolio?industry=healthcare"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "Healthcare projects — Sendian Security",
+      "url": "http://127.0.0.1:3889/portfolio?industry=healthcare"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(0,eval)(sessionStorage.getItem('widthCheck'))"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/portfolio?industry=healthcare",
+      "result": {
+        "container": 960,
+        "h1": 56,
+        "ok": true,
+        "route": "/portfolio?industry=healthcare",
+        "textScale": 2,
+        "width": 1280
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio?industry=healthcare"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "Sendian Security — Integrated security solutions in Qatar",
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(0,eval)(sessionStorage.getItem('widthCheck'))"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "container": 960,
+        "h1": 85.3333,
+        "ok": true,
+        "route": "/",
+        "textScale": 2,
+        "width": 1280
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "3840",
+      "2160"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 2160,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 3840
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "checkDesktopPage()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "container": 2880,
+        "h1": 256,
+        "ok": true,
+        "route": "/",
+        "textScale": 2,
+        "width": 3840
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "localStorage.setItem('sendian-home-text-size','1')"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": null
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "390",
+      "844"
+    ],
+    "error": null,
+    "result": {
+      "deviceScaleFactor": 1,
+      "height": 844,
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "mobile": false,
+      "width": 390
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "Sendian Security — Integrated security solutions in Qatar",
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(()=>{if(document.documentElement.scrollWidth>innerWidth)throw Error('Mobile overflow');return {route:location.pathname,width:innerWidth,container:document.querySelector('.container').getBoundingClientRect().width}})()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/",
+      "result": {
+        "container": 350,
+        "route": "/",
+        "width": 390
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/about"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "About us — Sendian Security",
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(()=>{if(document.documentElement.scrollWidth>innerWidth)throw Error('Mobile overflow');return {route:location.pathname,width:innerWidth,container:document.querySelector('.container').getBoundingClientRect().width}})()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/about",
+      "result": {
+        "container": 350,
+        "route": "/about",
+        "width": 390
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/about"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/portfolio"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "Sendian Security — Projects & portfolio",
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(()=>{if(document.documentElement.scrollWidth>innerWidth)throw Error('Mobile overflow');return {route:location.pathname,width:innerWidth,container:document.querySelector('.container').getBoundingClientRect().width}})()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/portfolio",
+      "result": {
+        "container": 350,
+        "route": "/portfolio",
+        "width": 390
+      }
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "url": "http://127.0.0.1:3889/portfolio"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3889/services"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "targetId": "C5C2FFBA43D3BD200038CED374E20DCC",
+      "title": "Services — Sendian Security",
+      "url": "http://127.0.0.1:3889/services"
+    },
+    "success": true
+  },
+  {
+    "command": [
+      "eval",
+      "(()=>{if(document.documentElement.scrollWidth>innerWidth)throw Error('Mobile overflow');return {route:location.pathname,width:innerWidth,container:document.querySelector('.container').getBoundingClientRect().width}})()"
+    ],
+    "error": null,
+    "result": {
+      "lifecycle": {
+        "effectiveLaunch": {
+          "browserLaunched": true,
+          "engine": "chrome",
+          "launchHash": 10555201366498914000
+        },
+        "launched": false,
+        "relaunchedBrowser": false,
+        "restartedBackground": false,
+        "restoreStatus": "loaded",
+        "reused": true,
+        "saveStatus": "saved"
+      },
+      "origin": "http://127.0.0.1:3889/services",
+      "result": {
+        "container": 350,
+        "route": "/services",
+        "width": 390
+      }
+    },
+    "success": true
+  }
+]

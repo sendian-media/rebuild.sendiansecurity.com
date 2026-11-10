@@ -11,7 +11,7 @@ computed dimension = D × scale
 
 Use CSS viewport width, not physical display resolution. A screenshot bitmap cannot establish `R` without its viewport/DPR/zoom information. Two monitors exposing the same CSS viewport should compute the same layout regardless of their physical pixels.
 
-The approved Sendian home reference is 1920px, not the earlier SOP's 1440px starter. Its content width is 1200px, or 62.5% of the viewport:
+The Sendian reference viewport is 1920px, not the earlier SOP's 1440px starter. The original content width was 1200px (62.5%); the user subsequently approved **1440px (75%) across all four pages**. See `docs/home-scaling/width-1440/validation.md` for the current project settings. The table below retains the original 1200px example to illustrate the arithmetic, not the latest shell choice:
 
 | CSS width | Content | H1 (64px reference) | Hero minimum (720px reference) |
 | ---: | ---: | ---: | ---: |
