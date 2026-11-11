@@ -1,0 +1,229 @@
+---
+import type { ServicePageContent } from '@/data/service-details';
+
+interface ServiceSummary {
+  category: string;
+  title: string;
+  slug: string;
+  image: string;
+  description: string;
+}
+
+interface Props {
+  service: ServiceSummary;
+  detail: ServicePageContent;
+  relatedServices: ServiceSummary[];
+}
+
+const { service, detail, relatedServices } = Astro.props;
+---
+
+<div class="sp-detail">
+  <section class="sp-hero" style={`--sp-hero-image: url(${service.image})`}>
+    <div class="container sp-hero-inner">
+      <h1>{service.title}</h1>
+      <nav class="sp-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">›</span>
+        <a href="/services">Services</a><span aria-hidden="true">›</span>
+        <span aria-current="page">{service.title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <nav class="sp-section-nav" aria-label="Service sections">
+    <div class="container sp-section-nav-inner">
+      <p class="sp-service-label">{service.title}</p>
+      <span class="sp-divider" aria-hidden="true"></span>
+      <div class="sp-tabs">
+        <a href="#overview">Overview</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#applications">Applications</a>
+      </div>
+      <a class="sp-contact-link" href="/contact">Contact us</a>
+    </div>
+  </nav>
+
+  <section class="sp-overview" id="overview">
+    <div class="container sp-overview-grid">
+      <article class="sp-story">
+        <p class="eyebrow">Overview</p>
+        <h2>{detail.overviewHeading}</h2>
+        <div class="sp-problem-outcome">
+          <div>
+            <h3>The challenge</h3>
+            <p>{detail.challenge}</p>
+          </div>
+          <div>
+            <h3>The outcome</h3>
+            <p>{detail.outcome}</p>
+          </div>
+        </div>
+        <div class="sp-why">
+          <h3>Why SISS</h3>
+          <ul>
+            {detail.why.map((reason) => <li><span aria-hidden="true">✓</span>{reason}</li>)}
+          </ul>
+        </div>
+      </article>
+
+      <aside class="sp-related" aria-labelledby="sp-related-title">
+        <p class="eyebrow">Explore</p>
+        <h2 id="sp-related-title">Related services</h2>
+        <ul>
+          {relatedServices.map((related) => (
+            <li><a href={`/services/${related.slug}`}>{related.title}<span aria-hidden="true">→</span></a></li>
+          ))}
+        </ul>
+        <a class="sp-all-services" href="/services">View all services <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sp-solutions" id="solutions">
+    <div class="container">
+      <p class="eyebrow">What we deliver</p>
+      <h2>{detail.solutionsHeading}</h2>
+      <p class="sp-section-intro">{detail.solutionsIntro}</p>
+      <div class="sp-capabilities">
+        {detail.capabilities.map((capability, index) => (
+          <article class="sp-capability">
+            <span class="sp-capability-number">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{capability.title}</h3>
+            <p>{capability.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sp-applications" id="applications">
+    <div class="container sp-applications-inner">
+      <div>
+        <p class="eyebrow">Applications</p>
+        <h2>Where this solution fits</h2>
+      </div>
+      <ul class="sp-app-list">
+        {detail.applications.map((application) => <li>{application}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="sp-cta">
+    <div class="container sp-cta-inner">
+      <div>
+        <p class="eyebrow eyebrow-light">Plan your project</p>
+        <h2>Let’s discuss your {service.title.toLowerCase()} requirements.</h2>
+      </div>
+      <a class="button button-white" href="/contact">Contact our team <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<style>
+  .sp-hero {
+    min-height: 340px;
+    color: #fff;
+    background-image: linear-gradient(90deg, rgba(5, 17, 34, .9), rgba(5, 17, 34, .48)), var(--sp-hero-image);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .sp-hero-inner { min-height: 340px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; }
+  .sp-hero h1 { max-width: 760px; font-size: clamp(38px, 4vw, 54px); line-height: 1.12; letter-spacing: -.025em; }
+  .sp-breadcrumb { max-width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 16px 22px; background: rgba(5, 24, 57, .74); color: #fff; font: 600 12px/1.5 Montserrat, Arial, sans-serif; text-transform: uppercase; }
+  .sp-breadcrumb a { color: #dce7f7; }
+  .sp-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .sp-breadcrumb [aria-current="page"] { text-decoration: underline; text-underline-offset: 3px; }
+
+  .sp-section-nav { background: #fff; border-bottom: 1px solid #e0e6ee; }
+  .sp-section-nav-inner { min-height: 88px; display: flex; align-items: center; gap: 24px; }
+  .sp-service-label { flex: 0 1 auto; color: #697587; font-size: 15px; font-weight: 600; }
+  .sp-divider { width: 1px; height: 30px; background: #cbd3df; }
+  .sp-tabs { min-width: 0; display: flex; align-items: center; gap: 30px; }
+  .sp-tabs a { min-height: 44px; display: inline-flex; align-items: center; color: var(--ink); font: 600 14px/1.4 Montserrat, Arial, sans-serif; white-space: nowrap; }
+  .sp-tabs a:hover { color: var(--blue); }
+  .sp-tabs a:focus-visible, .sp-contact-link:focus-visible, .sp-related a:focus-visible { outline-offset: 2px; }
+  .sp-contact-link { min-height: 44px; min-width: 140px; margin-left: auto; padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 24px; background: var(--blue); color: #fff; font: 600 13px/1.4 Montserrat, Arial, sans-serif; white-space: nowrap; }
+  .sp-contact-link:hover { filter: brightness(.92); }
+
+  .sp-overview { padding-block: 74px 82px; background: #fff; }
+  .sp-overview-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(250px, .9fr); gap: 54px; align-items: start; }
+  .sp-story h2, .sp-solutions h2, .sp-applications h2 { margin-top: 16px; font-size: clamp(30px, 3vw, 40px); line-height: 1.2; letter-spacing: -.02em; }
+  .sp-problem-outcome { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 32px; }
+  .sp-problem-outcome h3, .sp-why h3 { font-size: 16px; line-height: 1.4; font-weight: 700; }
+  .sp-problem-outcome p { margin-top: 10px; color: var(--muted); font-size: 15px; line-height: 1.65; }
+  .sp-why { margin-top: 30px; padding-top: 24px; border-top: 1px solid #d9e0e8; }
+  .sp-why ul { display: grid; gap: 14px; margin: 18px 0 0; padding: 0; list-style: none; }
+  .sp-why li { display: flex; align-items: flex-start; gap: 11px; color: #344258; font-size: 14px; line-height: 1.6; }
+  .sp-why li span { flex: 0 0 19px; width: 19px; height: 19px; display: inline-grid; place-items: center; margin-top: 1px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; }
+  .sp-related { padding: 28px; border: 1px solid #e0e6ee; background: #fff; }
+  .sp-related h2 { margin-top: 10px; font-size: 19px; line-height: 1.35; }
+  .sp-related ul { margin: 17px 0 0; padding: 0; list-style: none; }
+  .sp-related li { border-top: 1px solid #e0e6ee; }
+  .sp-related li a { min-height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font: 600 13px/1.45 Montserrat, Arial, sans-serif; }
+  .sp-related li a span, .sp-all-services span { color: var(--blue); }
+  .sp-related li a:hover { color: var(--blue); }
+  .sp-all-services { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; color: var(--blue); font: 600 13px/1.5 Montserrat, Arial, sans-serif; }
+
+  .sp-solutions { padding-block: 76px 84px; background: var(--pale); }
+  .sp-section-intro { max-width: 650px; margin-top: 14px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+  .sp-capabilities { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 38px; }
+  .sp-capability { min-height: 230px; padding: 23px; background: #fff; border-top: 3px solid var(--blue); }
+  .sp-capability-number { color: var(--blue); font: 600 12px/1.4 Montserrat, Arial, sans-serif; letter-spacing: .14em; }
+  .sp-capability h3 { margin-top: 22px; font-size: 17px; line-height: 1.35; }
+  .sp-capability p { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+
+  .sp-applications { padding-block: 72px 76px; background: #fff; }
+  .sp-applications-inner { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 55px; align-items: start; }
+  .sp-applications h2 { max-width: 430px; }
+  .sp-app-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; margin: 0; padding: 0; list-style: none; }
+  .sp-app-list li { position: relative; min-height: 54px; display: flex; align-items: center; padding: 11px 0 11px 22px; border-bottom: 1px solid #e0e6ee; color: #344258; font-size: 14px; line-height: 1.45; }
+  .sp-app-list li::before { position: absolute; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); content: ""; }
+
+  .sp-cta { padding-block: 52px; background: var(--blue); color: #fff; }
+  .sp-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+  .sp-cta h2 { max-width: 700px; margin-top: 14px; font-size: clamp(26px, 3vw, 36px); line-height: 1.2; }
+  .sp-cta .button { min-width: 205px; }
+
+  @media (max-width: 1000px) {
+    .sp-section-nav-inner { flex-wrap: wrap; gap: 12px 18px; padding-block: 15px; }
+    .sp-service-label { flex-basis: auto; }
+    .sp-contact-link { margin-left: auto; }
+    .sp-overview-grid { grid-template-columns: minmax(0, 1.6fr) minmax(230px, .9fr); gap: 28px; }
+    .sp-capabilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 700px) {
+    .sp-hero, .sp-hero-inner { min-height: 280px; }
+    .sp-hero { background-attachment: scroll; }
+    .sp-hero-inner { grid-template-columns: 1fr; align-content: center; justify-items: center; gap: 22px; text-align: center; }
+    .sp-hero h1 { font-size: clamp(34px, 8vw, 44px); }
+    .sp-breadcrumb { justify-content: center; padding: 13px 16px; font-size: 10px; }
+    .sp-section-nav-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 14px; }
+    .sp-service-label { grid-column: 1 / -1; }
+    .sp-divider { display: none; }
+    .sp-tabs { grid-column: 1; gap: 18px; overflow-x: auto; scrollbar-width: thin; }
+    .sp-tabs a { font-size: 12px; }
+    .sp-contact-link { grid-column: 2; grid-row: 2; min-width: 110px; padding-inline: 15px; font-size: 12px; }
+    .sp-overview, .sp-solutions, .sp-applications { padding-block: 54px; }
+    .sp-overview-grid, .sp-applications-inner { grid-template-columns: 1fr; gap: 34px; }
+    .sp-problem-outcome { gap: 20px; }
+    .sp-related { padding: 22px; }
+    .sp-capabilities { margin-top: 28px; }
+    .sp-capability { min-height: 205px; padding: 20px; }
+    .sp-app-list { gap: 0 18px; }
+    .sp-cta { padding-block: 42px; }
+    .sp-cta-inner { align-items: flex-start; flex-direction: column; }
+    .sp-cta .button { width: 100%; }
+  }
+  @media (max-width: 480px) {
+    .sp-hero-inner { min-height: 260px; }
+    .sp-hero h1 { font-size: 35px; }
+    .sp-tabs { gap: 14px; }
+    .sp-tabs a { font-size: 11px; }
+    .sp-problem-outcome, .sp-capabilities, .sp-app-list { grid-template-columns: 1fr; }
+    .sp-capability { min-height: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sp-hero { background-attachment: scroll; }
+  }
+</style>

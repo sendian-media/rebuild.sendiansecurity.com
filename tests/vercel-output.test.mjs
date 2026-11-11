@@ -7,6 +7,26 @@ const config = JSON.parse(await readFile(new URL('config.json', output), 'utf8')
 const functionDir = new URL('functions/_render.func/', output);
 const runtime = JSON.parse(await readFile(new URL('.vc-config.json', functionDir), 'utf8'));
 const { default: app } = await import(new URL(runtime.handler, functionDir));
+const servicePages = [
+  ['cctv-surveillance', 'CCTV Surveillance'],
+  ['access-control', 'Access Control Solutions'],
+  ['cyber-security', 'Cyber Security Solutions'],
+  ['structured-cabling', 'Structured Cabling System'],
+  ['data-center', 'Data Center Solution'],
+  ['storage-solutions', 'Storage Solution'],
+  ['parking-management', 'Parking Management Systems'],
+  ['parking-guidance', 'Parking Guidance Systems'],
+  ['lpr-anpr', 'LPR Solutions'],
+  ['unified-communications', 'Unified Communication'],
+  ['enterprise-network', 'Enterprise Network Solutions'],
+  ['home-automation', 'Home Automation Systems'],
+  ['audio-visual', 'Audio Visual Systems'],
+  ['video-solutions', 'Video Solutions'],
+  ['annual-maintenance', 'Annual Maintenance Contracts'],
+  ['intercom', 'Intercom System'],
+  ['smart-wifi', 'Smart WiFi Solution'],
+  ['cloud-solutions', 'Cloud Solutions'],
+];
 
 for (const path of ['/', '/about', '/portfolio', '/services']) {
   test(`Vercel routes and renders ${path}`, async () => {
@@ -19,6 +39,38 @@ for (const path of ['/', '/about', '/portfolio', '/services']) {
     assert.match(await response.text(), /<main id="main">/);
   });
 }
+
+test('linked vendor and legal pages render locally', async () => {
+  for (const [path, text] of [
+    ['/vendor-registration', 'Register your company'],
+    ['/privacy', 'Privacy information will be published before launch'],
+    ['/terms', 'Terms and conditions will be published before launch'],
+  ]) {
+    const response = await app.fetch(new Request(`https://example.test${path}`));
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert(html.includes(text), path);
+    if (path === '/vendor-registration') {
+      assert.match(html, /<fieldset disabled/);
+      assert(html.includes('cannot submit information'));
+    }
+  }
+});
+
+test('all service detail routes render and index cards link to them', async () => {
+  const indexResponse = await app.fetch(new Request('https://example.test/services'));
+  const indexHtml = await indexResponse.text();
+  for (const [slug, title] of servicePages) {
+    const response = await app.fetch(new Request(`https://example.test/services/${slug}`));
+    assert.equal(response.status, 200, slug);
+    const html = await response.text();
+    assert.match(html, new RegExp(`<h1[^>]*>${title}</h1>`), slug);
+    assert(html.includes('id="applications"'), slug);
+    assert(indexHtml.includes(`href="/services/${slug}"`), slug);
+  }
+  const missing = await app.fetch(new Request('https://example.test/services/not-a-service'));
+  assert.equal(missing.status, 404);
+});
 
 test('portfolio query filtering still runs at request time', async () => {
   for (const [slug, name] of [['towers', 'Towers'], ['healthcare', 'Healthcare']]) {

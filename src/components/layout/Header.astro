@@ -11,6 +11,10 @@ import { navigation } from '@/data/navigation';
         return <a href={href} aria-current={current ? 'page' : undefined}>{label}</a>;
       })}
     </nav>
-    <div class="header-actions"><span class="linkedin" aria-label="LinkedIn">in</span><a class="vendor-link" href="/vendor-registration">Vendor registration</a></div>
+    <div class="header-actions"><a class="linkedin" href="https://www.linkedin.com/company/sendian-integrated-security-services" aria-label="Sendian Integrated Security Services on LinkedIn"><img src="/images/home/linkedin-in-white.png" alt="" width="840" height="779" /></a><a class="vendor-link" href="/vendor-registration">Vendor registration</a></div>
   </div>
 </header>
+
+<style>
+  .linkedin img { width: 50%; height: auto; }
+</style>

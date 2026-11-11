@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceDetail from '@/components/sites/sendian-service-pages/ServiceDetail.astro';
+import { services } from '@/data/services';
+import { serviceDetails } from '@/data/service-details';
+
+const serviceItems = services.bands.flatMap((band) => band.items);
+const slug = Astro.params.slug;
+const service = serviceItems.find((item) => item.slug === slug);
+const detail = slug ? serviceDetails[slug] : undefined;
+const relatedServices = detail
+  ? detail.related.flatMap((relatedSlug) => {
+      const related = serviceItems.find((item) => item.slug === relatedSlug);
+      return related ? [related] : [];
+    })
+  : [];
+
+if (!service || !detail) Astro.response.status = 404;
+
+const pageTitle = service ? `${service.title} in Qatar | SISS` : 'Service not found | SISS';
+const pageDescription = detail?.outcome ?? 'Explore Sendian Integrated Security Services solutions in Qatar.';
+const socialImage = service?.image ?? services.hero.image;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} socialImage={socialImage} bodyClass="page-service-detail">
+  {service && detail ? (
+    <ServiceDetail service={service} detail={detail} relatedServices={relatedServices} />
+  ) : (
+    <section class="service-not-found">
+      <div class="container">
+        <p class="eyebrow">Services</p>
+        <h1>We couldn’t find that service.</h1>
+        <p>Browse the services available from Sendian Integrated Security Services.</p>
+        <a class="button button-blue" href="/services">View all services <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .service-not-found { min-height: 52vh; display: grid; align-items: center; padding-block: 72px; background: #fff; }
+  .service-not-found h1 { margin-top: 16px; font-size: clamp(34px, 5vw, 52px); }
+  .service-not-found p:not(.eyebrow) { margin-top: 16px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+  .service-not-found .button { margin-top: 28px; }
+</style>
