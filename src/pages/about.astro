@@ -38,7 +38,12 @@ const capabilities = [
 
   <section class="ab-who">
     <div class="container ab-who-grid">
-      <p class="ab-who-label">Who we are.</p>
+      <div class="ab-who-visual">
+        <p class="ab-who-label">Who we are.</p>
+        <div class="ab-who-image">
+          <img src="/sites/sendiansecurity-com/home/about/about-siss.png" alt="Outdoor CCTV cameras monitoring a commercial building" width="800" height="1000" loading="lazy" />
+        </div>
+      </div>
       <div class="ab-who-main">
         <h2>SISS delivers <span class="hl">integrated security, ELV, ICT and automation</span> solutions for modern developments and infrastructure.</h2>
         <p>For more than 14 years, SISS has supported residential, commercial, and institutional projects through structured engineering, disciplined execution, and long-term operational support.</p>
@@ -97,3 +102,14 @@ const capabilities = [
     sub="Our team is ready to help you plan a secure, integrated solution."
   />
 </BaseLayout>
+
+<style>
+  :global(.page-about) .ab-who-label { margin-top: 0; }
+  .ab-who-visual { display: flex; flex-direction: column; }
+  .ab-who-image { position: relative; flex: 1; aspect-ratio: 16 / 9; margin-top: calc(24 * var(--ds-px, 1px)); overflow: hidden; border-radius: calc(8 * var(--ds-px, 1px)); background: var(--navy); }
+  .ab-who-image img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  @media (min-width: 1201px) {
+    :global(.page-about) .ab-who-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+    .ab-who-image { aspect-ratio: auto; min-height: calc(280 * var(--ds-px, 1px)); }
+  }
+</style>
