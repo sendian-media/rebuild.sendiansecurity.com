@@ -35,18 +35,18 @@ const p = (
 // docs/figma-portfolio-v3-assets.md (assets remain illustrative placeholders).
 export const projects: Record<IndustrySlug, PortfolioProject[]> = {
   towers: [
-    p('Marina Mix 49 (2B+G+27F+Roof)', 'marina-mix-49.jpg', 'std', { badge: true }),
+    p('Marina Mix 49 (2B+G+27F+Roof)', 'marina-mix-49-user.jpg', 'std', { badge: true }),
     p('Marina Mix 52 (B+G+7P+13F+Roof)', 'marina-mix-52.png', 'std'),
-    p('Tornado Tower Offices', 'pexels-tornado-tower-doha.jpeg', 'std', { badge: true }),
+    p('Tornado Tower Offices', 'tornado-tower.jpg', 'std', { badge: true }),
     p('Doha Bank', 'doha-bank.png', 'wide'),
   ],
   commercial: [
-    p('Sendian Head Quarter', 'pexels-sendian-hq-doha.jpeg', 'std', { badge: true }),
+    p('Sendian Head Quarter', 'sendian-head-quarter.jpg', 'std', { badge: true }),
     p('Ghanem Office Building', 'ghanem-office-building.jpg', 'std'),
-    p('Ministry of Interior building', 'pexels-ministry-office-building.jpeg', 'std', { badge: true }),
+    p('Ministry of Interior building', 'ministry-of-interior.jpg', 'std', { badge: true }),
     p('Qatar Petroleum', 'qatar-petroleum.png', 'std'),
-    p('Qatar Petroleum – IT Building', 'pexels-qatar-petroleum-it-building.jpeg', 'std', { badge: true }),
-    p('Lusail MU C20 Foxhills', 'pexels-lusail-foxhills-office.jpeg', 'std', { badge: true }),
+    p('Qatar Petroleum – IT Building', 'qatar-petroleum-it-building.jpg', 'std', { badge: true }),
+    p('Lusail MU C20 Foxhills', 'foxhills-residential.jpg', 'std', { badge: true }),
     p('Sinjer Car Rent', 'pexels-sinjer-car-rent-fleet.jpeg', 'std', {
       badge: true,
       scope: 'MOI-regulated CCTV systems',
@@ -61,7 +61,7 @@ export const projects: Record<IndustrySlug, PortfolioProject[]> = {
     }),
   ],
   residential: [
-    p('Sendian Compound', 'sendian-compound.jpg', 'std', { badge: true }),
+    p('Sendian Compound', 'sendian-compound.png', 'std', { badge: true }),
     p('Al Eeb Compound', 'al-eeb-compound.jpg', 'std', { badge: true }),
     p('Villa 25 & 16 – Capri Garden', 'capri-garden.jpg', 'std', { badge: true }),
     p('4 Villa Compound', 'pexels-villa-compound-4.jpeg', 'std', { badge: true }),
@@ -87,36 +87,36 @@ export const projects: Record<IndustrySlug, PortfolioProject[]> = {
   ],
   healthcare: [
     p('Eve Medical Clinic', 'eve-medical-clinic.jpg', 'std', { badge: true }),
-    p('PMC Pharmacy – Floresta', 'pexels-pharmacist-counter.jpeg', 'std', { badge: true }),
-    p('PMC Pharmacy – Rawdat Hamama', 'pexels-pharmacist-shelves.jpeg', 'std', { badge: true }),
-    p('PMC Pharmacy – Izgawa', 'pexels-pharmacy-consultation.jpeg', 'mid', { badge: true }),
-    p('PMC Pharmacy – Rawdat Hamama', 'pexels-pharmacy-shelf-arranging.jpeg', 'mid', {
+    p('PMC Pharmacy – Floresta', 'pmc-pharmacy-1.webp', 'std', { badge: true }),
+    p('PMC Pharmacy – Rawdat Hamama', 'pmc-pharmacy-2.webp', 'std', { badge: true }),
+    p('PMC Pharmacy – Izgawa', 'pmc-pharmacy-3.webp', 'mid', { badge: true }),
+    p('PMC Pharmacy – Rawdat Hamama', 'pmc-pharmacy-1.webp', 'mid', {
       badge: true,
       scope: 'Security and compliance systems maintenance',
     }),
   ],
   education: [
     p('The Lebanese School', 'lebanese-school.jpg', 'std'),
-    p('Qatar Finland School', 'pexels-qatar-finland-school.jpeg', 'std', { badge: true }),
-    p('English Modern School – Al Khor', 'pexels-english-modern-school-al-khor.jpeg', 'std', { badge: true }),
+    p('Qatar Finland School', 'qatar-finland-school.jpg', 'std', { badge: true }),
+    p('English Modern School – Al Khor', 'english-modern-school-al-khor.jpg', 'std', { badge: true }),
   ],
   retail: [
-    p('B Square Mall – Thumama', 'b-square-mall.jpg', 'std', {
+    p('B Square Mall – Thumama', 'b-square-mall-thumama.jpg', 'std', {
       badge: true,
       scope: 'CCTV upgrade and DIA integration',
     }),
     p('Domasco Watch – Doha Festival City', 'domasco-watch.png', 'std', { badge: true }),
-    p('Domasco Watch – City Center', 'pexels-domasco-watch-city-center.jpeg', 'std', { badge: true }),
-    p('Domasco Watch – Gharrafa Lulu', 'pexels-domasco-watch-gharrafa-lulu.jpeg', 'std', { badge: true }),
-    p('Domasco Watch – D-Ring Lulu', 'pexels-domasco-watch-d-ring-lulu.jpeg', 'std', { badge: true }),
-    p('Domasco Watch – Asian Town', 'pexels-domasco-watch-asian-town.jpeg', 'std', {
+    p('Domasco Watch – City Center', 'domasco-watch-city-center.jpg', 'std', { badge: true }),
+    p('Domasco Watch – Gharrafa Lulu', 'domasco-watch-gharrafa-lulu.webp', 'std', { badge: true }),
+    p('Domasco Watch – D-Ring Lulu', 'domasco-watch-city-center.jpg', 'std', { badge: true }),
+    p('Domasco Watch – Asian Town', 'domasco-watch-gharrafa-lulu.webp', 'std', {
       badge: true,
       scope: 'System installation, testing, and commissioning',
     }),
   ],
   showrooms: [
-    p('Honda Showroom', 'showroom.png', 'mid', { badge: true }),
-    p('GAC Showroom', 'pexels-gac-showroom.jpeg', 'mid', { badge: true }),
+    p('Honda Showroom', 'honda-showroom.jpg', 'mid', { badge: true }),
+    p('GAC Showroom', 'showroom.png', 'mid', { badge: true }),
   ],
   industrial: [
     p('Gulf Warehousing Company', 'industrial-yard.jpg', 'std'),

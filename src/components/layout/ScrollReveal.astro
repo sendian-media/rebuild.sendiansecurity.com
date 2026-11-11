@@ -1,0 +1,39 @@
+<script>
+  if ('IntersectionObserver' in window && typeof Element.prototype.animate === 'function') {
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const homeTargets = '.metrics .metric, .about-grid > div, .solutions .eyebrow, .solutions h2, .solution, .process .eyebrow, .process h2, .process-step, .trust .eyebrow, .trust h2, .trust-item, .certifications .eyebrow, .certifications .section-heading-row, .certificate, .projects .eyebrow, .projects .section-heading-row, .project, .contact-inner > *';
+    const pageTargets = 'main section article, main section h2, main section h3, main section p, main .metric, main .contact-inner > *, main .body-copy section';
+    const selector = document.body.classList.contains('page-home') ? homeTargets : pageTargets;
+    const targets = Array.from(document.querySelectorAll<HTMLElement>(selector));
+    const animations = new Map<Element, Animation>();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        if (motionPreference.matches || entry.target.contains(document.activeElement)) return;
+        const animation = entry.target.animate(
+          [{ translate: '0 18px' }, { translate: '0 0' }],
+          { duration: 600, easing: 'cubic-bezier(.2, 0, 0, 1)' }
+        );
+        animations.set(entry.target, animation);
+        animation.finished.then(() => animations.delete(entry.target), () => animations.delete(entry.target));
+      });
+    }, { threshold: .1 });
+
+    targets.forEach((target) => {
+      if (targets.some((other) => other !== target && other.contains(target))) return;
+      const rect = target.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < window.innerHeight) return;
+      observer.observe(target);
+    });
+    document.addEventListener('focusin', (event) => {
+      if (!(event.target instanceof Element)) return;
+      animations.forEach((animation, target) => {
+        if (target.contains(event.target as Element)) animation.cancel();
+      });
+    });
+    motionPreference.addEventListener('change', () => {
+      if (motionPreference.matches) animations.forEach((animation) => animation.cancel());
+    });
+  }
+</script>

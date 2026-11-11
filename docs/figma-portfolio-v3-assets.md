@@ -7,12 +7,12 @@ Exported `2026-11-09` via the Figma Desktop Bridge plugin (`figma.getImageByHash
 | File (`public/sites/sendiansecurity-com/portfolio/projects/`) | Figma image hash | Pixels | Used by |
 | --- | --- | --- | --- |
 | `ghanem-office-building.jpg` | `1871e993b374ebf12ecf88e0fa96e16a0c100e3b` | 1000×650 | hero band + Commercial-02 |
-| `marina-mix-49.jpg` | `88a0558febe589af54b295025b2d171fb4bec9ba` | 1000×650 | Towers-01 |
+| `marina-mix-49.jpg` | `88a0558febe589af54b295025b2d171fb4bec9ba` | 1000×650 | Original Towers-01 image; replaced by user-supplied photo |
 | `marina-mix-52.png` | `0e2504dcf14b2a2bfc9bae772f6356b4050cacb5` | 1000×650 | Towers-02 |
 | `doha-bank.png` | `0c913d07a1f7e4653d5c43b96e9c63e22c41900f` | 1000×650 | Towers-04 |
 | `qatar-petroleum.png` | `d2025cbeeb5a5dbd2678b46a24411fcd31bdc1d5` | 1000×650 | Commercial-04 |
 | `al-jazi-compounds.jpg` | `0d1aa22f696b20d806eefe47721b5536c6f2d34e` | 1838×1054 | Commercial-08 |
-| `sendian-compound.jpg` | `5680a0178a512d07725e3278cf95a9a9f794eab0` | 1647×1094 | Residential-01 |
+| `sendian-compound.jpg` | `5680a0178a512d07725e3278cf95a9a9f794eab0` | 1647×1094 | Original Residential-01 image; replaced by user-supplied photo |
 | `al-eeb-compound.jpg` | `0b27a117de202c1ebe38369f1d01c3259297f83d` | 1773×1029 | Residential-02 |
 | `capri-garden.jpg` | `759ebd8bc9a6c1d84bb41776801941f2ea485e36` | 1446×955 | Residential-03 |
 | `sendian-residence-al-sadd.jpg` | `28150a832dfd824f2253d2d76024be9983065f40` | 1647×1094 | Residential-05 |
@@ -20,7 +20,7 @@ Exported `2026-11-09` via the Figma Desktop Bridge plugin (`figma.getImageByHash
 | `lebanese-school.jpg` | `c18df024d54395aaad531694c81c50f6742d476b` | 1000×650 | Education-01 |
 | `b-square-mall.jpg` | `75e46bdaa8bfa1864edfb377db0fea5592d92a64` | 2592×1728 | Retail-01 |
 | `domasco-watch.png` | `3f2f56cb3d0f30f5ab7eae13eb589f084ddcae41` | 1000×650 | Retail-02 |
-| `showroom.png` | `bf42ba1aa0ae870d2ab9974f55ed7b9d3090cbc6` | 1000×650 | Showrooms-01 |
+| `showroom.png` | `bf42ba1aa0ae870d2ab9974f55ed7b9d3090cbc6` | 1000×650 | Showrooms-01 and Showrooms-02 |
 | `industrial-yard.jpg` | `f48e54c15598a71c54c839b645f52d197da1aade` | 1000×650 | Industrial-01 |
 
 The original V3 images above remain unchanged. Repeated project-card placeholders are supplemented with locally stored Pexels illustrations below.
@@ -36,6 +36,30 @@ Design notes captured while auditing the file (2026-11-09):
 - Chip states: active = blue fill/white text; idle = white/1px `#dee6f0` border.
 - Sector frames (Towers/Commercial/…) still contained the earlier masonry layout while the file refactor groups industries inside the all-projects page; implementation follows the newest grouped layout and reuses it for filtered views.
 
+## User-supplied photographs
+
+The following images replace placeholders on the education, retail, showroom, residential, commercial, and towers cards. Their usage rights and identification have not been independently verified; the illustrative badges remain in place.
+
+| Local file | Used by | Source |
+| --- | --- | --- |
+| `qatar-finland-school.jpg` | Education-02 | [User-supplied Blogger image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyDbzhLCVUfhLqP2f7mV_DdxZPsPJ31xi9qR1iy7najTB9x5AmHydMdHWpZO61Diz3jwxCu89e8cIF022cgWiTbOCTApPLuH08njb7vByzePGx9awOmjbtkEWAMZ916g_zcVA4fkvSf28/s1600/20181127_123714.jpg) |
+| `english-modern-school-al-khor.jpg` | Education-03 | [User-supplied Teacher Horizons image](https://www.teacherhorizons.com/static/mediav2/schools/3775/images/504327_main.jpg) |
+| `b-square-mall-thumama.jpg` | Retail-01 | [User-supplied Google image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyPUk09UDqRxbGlRgUEBtW-Uefy02F00XygutFNckY-w&s=10) |
+| `domasco-watch-city-center.jpg` | Retail-03 and Retail-05 | [User-supplied City Center Doha image](https://citycenterdoha.com/wp-content/uploads/2024/11/CC-95-800x533-1.jpg) |
+| `domasco-watch-gharrafa-lulu.webp` | Retail-04 and Retail-06 | [User-supplied Doha Directory image](https://cdn2.advanceinfotech.org/doha.directory/1200x675/business/629/domasco-watches7-1651905388.webp) |
+| `honda-showroom.jpg` | Showrooms-01 | [User-supplied Google image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGRNJ4noEK_PAAPzGF94nCRXNOE26LkrlgLKlkZcbQTlEhYNbiNUNW1Yk&s=10) |
+| `gac-showroom.jpg` | Previously supplied; not currently used | [User-supplied Al-Futtaim image](https://dam.alfuttaim.com/dx/api/dam/v1/collections/74997eb3-ad83-43c1-be3a-140cd95c78ae/items/fac6c4a9-087b-4518-8455-7cc18f8135bb/renditions/3bfd17c8-9537-4db6-95b4-ed846ae9b2a2?binary=true&mformat=true) |
+| `pmc-pharmacy-1.webp` | Healthcare-02 and Healthcare-05 | [User-supplied Doha Directory image](https://cdn2.advanceinfotech.org/doha.directory/1200x675/business/1031/pmc-pharmacy-and-more-0258-1653557974.webp) |
+| `pmc-pharmacy-2.webp` | Healthcare-03 | [User-supplied Doha Directory image](https://cdn2.advanceinfotech.org/doha.directory/1200x675/business/913/pmc-pharmacy-and-more-1652870392.webp) |
+| `pmc-pharmacy-3.webp` | Healthcare-04 | [User-supplied Doha Directory image](https://cdn2.advanceinfotech.org/doha.directory/1200x675/business/1032/pmc-pharmacy-and-more-0355-1-1653558672.webp) |
+| `sendian-compound.png` | Residential-01 | [User-supplied Sendian Group image](https://sendiangroup.com/images/sectors/real-estate-building.png) |
+| `foxhills-residential.jpg` | Commercial-06 | [User-supplied AEB Qatar image](https://aeb-qatar.com/wp-content/uploads/2016/06/Residential-Foxhills-01.jpg) |
+| `qatar-petroleum-it-building.jpg` | Commercial-05 | [User-supplied Skyscraper Center image](https://images.skyscrapercenter.com/building/qatar-petroleum-district_astad-project-management12.jpg) |
+| `ministry-of-interior.jpg` | Commercial-03 | [User-supplied AEB Qatar image](https://aeb-qatar.com/wp-content/uploads/2016/06/Ministry-of-Interior-01.jpg) |
+| `sendian-head-quarter.jpg` | Commercial-01 | [User-supplied AEB Qatar image](https://aeb-qatar.com/wp-content/uploads/2025/04/Seven-Seas-HQ-01-510x382.jpg) |
+| `tornado-tower.jpg` | Towers-03 | [User-supplied Google image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKYVMeJQaGq_5BU2RxOFP-_4zh95FPgl2ZmAubvduS8NvP9ivWvYAfUGg&s=10) |
+| `marina-mix-49-user.jpg` | Towers-01 | [User-supplied R.C. Almana image](https://rcalmana.com/wp-content/uploads/2020/08/IMG_9150-scaled.jpg) |
+
 ## Added illustrative photography — Pexels
 
 These local JPEGs replace repeated Figma placeholders while preserving the portfolio layout and card order. Every added photo is an illustrative sector match, not a photograph of the named Sendian project; the corresponding cards display the “Illustrative image” badge. Files are stored in `public/sites/sendiansecurity-com/portfolio/projects/` so the page has no remote image dependency.
@@ -44,11 +68,11 @@ The links below record the Pexels search query used to find each image, not its 
 
 | Local file | Used by | Pexels discovery query |
 | --- | --- | --- |
-| `pexels-tornado-tower-doha.jpeg` | Towers-03 | [Doha tornado tower](https://www.pexels.com/search/doha%20tornado%20tower/) |
-| `pexels-sendian-hq-doha.jpeg` | Commercial-01 | [Doha office building](https://www.pexels.com/search/doha%20office%20building/) |
-| `pexels-ministry-office-building.jpeg` | Commercial-03 | [Ministry office building](https://www.pexels.com/search/ministry%20office%20building/) |
-| `pexels-qatar-petroleum-it-building.jpeg` | Commercial-05 | [Qatar office tower](https://www.pexels.com/search/qatar%20office%20tower/) |
-| `pexels-lusail-foxhills-office.jpeg` | Commercial-06 | [Lusail office building](https://www.pexels.com/search/lusail%20office%20building/) |
+
+
+
+
+
 | `pexels-sinjer-car-rent-fleet.jpeg` | Commercial-07 | [Car rental fleet](https://www.pexels.com/search/car%20rental%20fleet/) |
 | `pexels-birkat-al-awamer-industrial.jpeg` | Commercial-09 | [Industrial building](https://www.pexels.com/search/industrial%20building/) |
 | `pexels-villa-compound-4.jpeg` | Residential-04 | [Villa compound](https://www.pexels.com/search/villa%20compound/) |
@@ -62,13 +86,6 @@ The links below record the Pexels search query used to find each image, not its 
 | `pexels-pharmacist-shelves.jpeg` | Healthcare-03 | [Pharmacist selecting medicine](https://www.pexels.com/search/pharmacist%20selecting%20medicine/) |
 | `pexels-pharmacy-consultation.jpeg` | Healthcare-04 | [Pharmacy consultation](https://www.pexels.com/search/pharmacy%20consultation/) |
 | `pexels-pharmacy-shelf-arranging.jpeg` | Healthcare-05 | [Pharmacist arranging shelves](https://www.pexels.com/search/pharmacist%20arranging%20shelves/) |
-| `pexels-qatar-finland-school.jpeg` | Education-02 | [Modern school campus](https://www.pexels.com/search/modern%20school%20campus/) |
-| `pexels-english-modern-school-al-khor.jpeg` | Education-03 | [Modern school building](https://www.pexels.com/search/modern%20school%20building/) |
-| `pexels-domasco-watch-city-center.jpeg` | Retail-03 | [Watches in display case](https://www.pexels.com/search/watches%20display%20case/) |
-| `pexels-domasco-watch-gharrafa-lulu.jpeg` | Retail-04 | [Watch display](https://www.pexels.com/search/watch%20display/) |
-| `pexels-domasco-watch-d-ring-lulu.jpeg` | Retail-05 | [Black watch close up](https://www.pexels.com/search/black%20watch%20close%20up/) |
-| `pexels-domasco-watch-asian-town.jpeg` | Retail-06 | [Wristwatch collection](https://www.pexels.com/search/wristwatch%20collection/) |
-| `pexels-gac-showroom.jpeg` | Showrooms-02 | [Car showroom customers](https://www.pexels.com/search/car%20showroom%20customers/) |
 | `pexels-birkat-material-store.jpeg` | Industrial-02 | [Industrial warehouse](https://www.pexels.com/search/industrial%20warehouse/) |
 | `pexels-tss-material-store.jpeg` | Industrial-03 | [Materials warehouse](https://www.pexels.com/search/materials%20warehouse/) |
 | `pexels-jaidah-car-yard.jpeg` | Industrial-04 | [Car storage yard](https://www.pexels.com/search/car%20storage%20yard/) |

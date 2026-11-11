@@ -41,6 +41,7 @@ h1,h2,h3,.eyebrow,.button,.text-link,.main-nav,.header-actions,.metric{font-fami
 .pf-grid{display:flex;flex-wrap:wrap;gap:52px 24px;margin-top:34px}
 .pf-w-std{width:calc((100% - 48px)/3)}.pf-w-mid{width:calc((100% - 24px)/2)}.pf-w-wide{width:calc((100% - 48px)*2/3 + 24px)}
 .pf-card-media{position:relative}.pf-card-media img{width:100%;height:100%;object-fit:cover;display:block}
+.pf-card-media img[src$="/english-modern-school-al-khor.jpg"],.pf-card-media img[src$="/domasco-watch-city-center.jpg"],.pf-card-media img[src$="/honda-showroom.jpg"]{object-position:left center}
 .pf-w-std .pf-card-media{aspect-ratio:384/300}.pf-w-mid .pf-card-media{aspect-ratio:588/380}.pf-w-wide .pf-card-media{aspect-ratio:792/420}
 .pf-badge{position:absolute;top:12px;left:12px;padding:6px 9px;background:#fff;color:var(--ink);font:600 10px/15px Montserrat,Arial,sans-serif;letter-spacing:.19em;text-transform:uppercase}
 .pf-card h4{margin-top:17px;font-size:20px;line-height:26px;font-weight:700;letter-spacing:-.01em}

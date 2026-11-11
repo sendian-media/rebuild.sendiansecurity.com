@@ -98,30 +98,4 @@
     syncMotion();
   }
 
-  if ('IntersectionObserver' in window && typeof Element.prototype.animate === 'function') {
-    const targets = document.querySelectorAll<HTMLElement>(
-      '.metrics .metric, .about-grid > div, .solutions .eyebrow, .solutions h2, .solution, .process .eyebrow, .process h2, .process-step, .trust .eyebrow, .trust h2, .trust-item, .certifications .eyebrow, .certifications .section-heading-row, .certificate, .projects .eyebrow, .projects .section-heading-row, .project, .contact-inner > *'
-    );
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        observer.unobserve(entry.target);
-        if (motionPreference.matches || document.documentElement.dataset.homeMotion !== 'playing') return;
-        entry.target.animate(
-          [{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'translateY(0)' }],
-          { duration: 600, easing: 'cubic-bezier(.2, 0, 0, 1)' }
-        );
-      });
-    }, { threshold: .1 });
-    targets.forEach((target) => observer.observe(target));
-    document.addEventListener('focusin', (event) => {
-      let element = event.target instanceof Element ? event.target : null;
-      while (element && element !== document.body) {
-        element.getAnimations().forEach((animation) => {
-          if (animation instanceof Animation && !('animationName' in animation)) animation.cancel();
-        });
-        element = element.parentElement;
-      }
-    });
-  }
 </script>

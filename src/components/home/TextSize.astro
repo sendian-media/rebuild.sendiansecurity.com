@@ -11,7 +11,7 @@
 
 <script>
   const controls = document.querySelector<HTMLElement>('[data-home-text-size]');
-  const page = document.querySelector<HTMLElement>('.page-home, .page-about, .page-portfolio');
+  const page = document.querySelector<HTMLElement>('.page-home, .page-about, .page-portfolio, .page-news, .page-news-detail, .page-contact, .page-service-detail');
   if (controls && page) {
     const buttons = Array.from(controls.querySelectorAll<HTMLButtonElement>('[data-ds-text-scale]'));
     const key = 'sendian-home-text-size';

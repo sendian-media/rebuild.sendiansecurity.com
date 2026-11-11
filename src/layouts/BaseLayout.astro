@@ -1,9 +1,12 @@
 ---
 import Header from '@/components/layout/Header.astro';
 import Footer from '@/components/layout/Footer.astro';
+import TextSize from '@/components/home/TextSize.astro';
 import SeoHead from '@/components/seo/SeoHead.astro';
+import ScrollReveal from '@/components/layout/ScrollReveal.astro';
 import '@/styles/global.css';
 import '@/styles/desktop-pages.css';
+import '@/styles/detail-desktop.css';
 
 interface Props {
   title: string;
@@ -30,6 +33,9 @@ const { title, description, socialImage, bodyClass, article } = Astro.props;
     <a class="skip-link" href="#main">Skip to content</a>
     <Header />
     <main id="main"><slot /></main>
-    <Footer />
+    <Footer>
+      {['page-news', 'page-news-detail', 'page-contact', 'page-service-detail'].includes(bodyClass ?? '') && <TextSize />}
+    </Footer>
+    <ScrollReveal />
   </body>
 </html>
