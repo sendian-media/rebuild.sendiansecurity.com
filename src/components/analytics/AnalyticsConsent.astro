@@ -1,0 +1,56 @@
+---
+const ga = process.env.GA_MEASUREMENT_ID ?? '';
+const clarity = process.env.CLARITY_PROJECT_ID ?? '';
+const enabled = process.env.ANALYTICS_ENABLED === 'true' && (/^G-[A-Z0-9]+$/.test(ga) || /^[a-z0-9]+$/.test(clarity));
+---
+{enabled && <section class="analytics-consent" data-analytics-consent data-ga={/^G-[A-Z0-9]+$/.test(ga) ? ga : ''} data-clarity={/^[a-z0-9]+$/.test(clarity) ? clarity : ''} aria-label="Analytics preferences">
+  <p>With your permission, Google Analytics and Microsoft Clarity may collect usage data, including session interactions. <a href="/privacy">Privacy information</a></p>
+  <div><button type="button" data-analytics-accept>Accept analytics</button> <button type="button" data-analytics-reject>Reject analytics</button></div>
+  <p role="status" data-analytics-status></p>
+</section>}
+<style>
+  .analytics-consent{position:fixed;z-index:100;bottom:1rem;right:1rem;max-width:30rem;background:white;color:#17263b;padding:1rem;box-shadow:0 2px 16px #0004;font-size:14px}
+  .analytics-consent p{margin:0 0 .75rem}.analytics-consent a{text-decoration:underline}.analytics-consent button{background:#164a91;color:white;padding:.65rem;margin:.2rem}.analytics-consent button:focus-visible{outline:3px solid #f90}
+</style>
+<script>
+  const box = document.querySelector<HTMLElement>('[data-analytics-consent]');
+  if (box) {
+    const key = 'sendian.analytics-consent.v1';
+    const status = box.querySelector<HTMLElement>('[data-analytics-status]');
+    type AnalyticsWindow = Window & { dataLayer?: unknown[][]; gtag?: (...args: unknown[]) => void; clarity?: ((...args: unknown[]) => void) & { q?: unknown[][] } };
+    const analytics = window as AnalyticsWindow;
+    let loaded = false;
+    const load = () => {
+      if (loaded) return;
+      loaded = true;
+      const ga = box.dataset.ga;
+      if (ga) {
+        analytics.dataLayer = analytics.dataLayer || [];
+        analytics.gtag = (...args: unknown[]) => analytics.dataLayer!.push(args);
+        analytics.gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+        analytics.gtag('js', new Date()); analytics.gtag('config', ga);
+        const script = document.createElement('script'); script.async = true; script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga)}`; document.head.append(script);
+      }
+      const clarity = box.dataset.clarity;
+      if (clarity) {
+        const queue: unknown[][] = [];
+        const fn: NonNullable<AnalyticsWindow['clarity']> = (...args) => queue.push(args);
+        fn.q = queue; analytics.clarity = fn;
+        fn('consentv2', { ad_Storage: 'denied', analytics_Storage: 'granted' });
+        const script = document.createElement('script'); script.async = true; script.src = `https://www.clarity.ms/tag/${encodeURIComponent(clarity)}`; document.head.append(script);
+      }
+    };
+    let choice: string | null = null;
+    try { localStorage.setItem(`${key}.test`, '1'); localStorage.removeItem(`${key}.test`); choice = localStorage.getItem(key); } catch { /* Unwritable storage cannot preserve consent. */ }
+    if (choice === 'accepted') load();
+    if (status && choice) status.textContent = choice === 'accepted' ? 'Analytics allowed.' : 'Analytics rejected.';
+    box.querySelector('[data-analytics-accept]')?.addEventListener('click', () => {
+      try { localStorage.setItem(key, 'accepted'); } catch { /* Consent remains in memory only. */ }
+      load(); if (status) status.textContent = 'Analytics allowed.';
+    });
+    box.querySelector('[data-analytics-reject]')?.addEventListener('click', () => {
+      try { localStorage.setItem(key, 'rejected'); } catch { try { localStorage.removeItem(key); } catch { /* Unwritable storage cannot preserve consent. */ } }
+      if (loaded) location.reload(); else if (status) status.textContent = 'Analytics rejected.';
+    });
+  }
+</script>

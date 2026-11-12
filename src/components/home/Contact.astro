@@ -1,5 +1,6 @@
 ---
-import { site } from '@/data/site';
+import { getSite } from '@/lib/cms';
+const site = await getSite();
 const {
   eyebrow = 'Start a conversation',
   heading = 'Let’s discuss your project.',

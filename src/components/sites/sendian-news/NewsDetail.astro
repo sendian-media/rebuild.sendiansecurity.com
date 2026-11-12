@@ -1,11 +1,9 @@
 ---
-import { news } from '@/data/news';
-import { articles } from '@/data/news-articles';
-
-interface Props { slug: string }
-const { slug } = Astro.props;
-const item = news.find((entry) => entry.slug === slug)!;
-const article = articles[slug];
+import type { news as staticNews } from '@/data/news';
+import type { articles as staticArticles } from '@/data/news-articles';
+interface Props { item: (typeof staticNews)[number]; article: (typeof staticArticles)[string]; news: typeof staticNews }
+const { item, article, news } = Astro.props;
+const slug = item.slug;
 const related = news.filter((entry) => entry.slug !== slug).slice(0, 3);
 ---
 

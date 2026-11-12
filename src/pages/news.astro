@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/layout/PageHero.astro';
 import Contact from '../components/home/Contact.astro';
-import { news } from '@/data/news';
+import { getNews } from '@/lib/cms';
+const { news } = await getNews();
 ---
 
 <BaseLayout title="News — Sendian Security" description="Updates from Sendian Integrated Security Services." socialImage={news[0].image} bodyClass="page-news">

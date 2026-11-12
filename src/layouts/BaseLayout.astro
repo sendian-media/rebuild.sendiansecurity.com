@@ -4,6 +4,8 @@ import Footer from '@/components/layout/Footer.astro';
 import TextSize from '@/components/home/TextSize.astro';
 import SeoHead from '@/components/seo/SeoHead.astro';
 import ScrollReveal from '@/components/layout/ScrollReveal.astro';
+import FormBehavior from '@/components/forms/FormBehavior.astro';
+import AnalyticsConsent from '@/components/analytics/AnalyticsConsent.astro';
 import '@/styles/global.css';
 import '@/styles/desktop-pages.css';
 import '@/styles/detail-desktop.css';
@@ -37,5 +39,7 @@ const { title, description, socialImage, bodyClass, article } = Astro.props;
       {['page-news', 'page-news-detail', 'page-contact', 'page-service-detail'].includes(bodyClass ?? '') && <TextSize />}
     </Footer>
     <ScrollReveal />
+    <FormBehavior />
+    <AnalyticsConsent />
   </body>
 </html>

@@ -119,3 +119,102 @@ test('public assets are included in Vercel static output', async () => {
     await access(new URL(`static/${asset}`, output));
   }
 });
+
+test('contact preview does not request an external map', async () => {
+  const response = await app.fetch(new Request('https://example.test/contact'));
+  const html = await response.text();
+  assert.match(html, /Map unavailable in local preview/);
+  assert.doesNotMatch(html, /<iframe\b|google\.com\/maps\/embed/i);
+});
+
+test('integrations default to off without network access', async () => {
+  const previous = globalThis.fetch;
+  globalThis.fetch = () => { throw new Error('Unexpected external request'); };
+  try {
+    for (const path of ['/news', '/news/ai-security-solutions-qatar', '/contact', '/vendor-registration']) {
+      const response = await app.fetch(new Request(`https://example.test${path}`));
+      const html = await response.text();
+      assert.equal(response.status, 200, path);
+      assert.doesNotMatch(html, /<section[^>]*data-analytics-consent/);
+      if (path === '/contact' || path === '/vendor-registration') assert.match(html, /<fieldset disabled/);
+    }
+    const response = await app.fetch(new Request('https://example.test/api/forms', { method: 'POST', body: 'form=contact' }));
+    assert.equal(response.status, 503);
+    const native = await app.fetch(new Request('https://example.test/api/forms', { method: 'POST', headers: { accept: 'text/html' }, body: 'form=contact' }));
+    assert.match(native.headers.get('content-type'), /text\/html/);
+    assert.match(await native.text(), /Forms are unavailable/);
+  } finally { globalThis.fetch = previous; }
+});
+
+test('forms validate submissions and only send to mocked providers', async () => {
+  const env = { FORMS_ENABLED: 'true', FORMS_ABUSE_PROTECTION_CONFIRMED: 'true', SITE_URL: 'https://example.test', HUBSPOT_PORTAL_ID: '123', HUBSPOT_CONTACT_FORM_ID: '00000000-0000-0000-0000-000000000001', HUBSPOT_VENDOR_FORM_ID: '00000000-0000-0000-0000-000000000002', MAILJET_API_KEY: 'test-key', MAILJET_API_SECRET: 'test-secret', MAILJET_FROM_EMAIL: 'sender@example.test', MAILJET_NOTIFICATION_TO: 'team@example.test' };
+  const old = Object.fromEntries(Object.keys(env).map((key) => [key, process.env[key]]));
+  Object.assign(process.env, env);
+  const previous = globalThis.fetch;
+  const calls = [];
+  globalThis.fetch = async (url, init) => { calls.push({ url: String(url), body: JSON.parse(init.body) }); return Response.json({ Messages: [{ Status: 'success' }] }); };
+  const submit = (data, origin = 'https://example.test') => app.fetch(new Request('https://example.test/api/forms', { method: 'POST', headers: { origin, 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data) }));
+  const contact = { form: 'contact', _gotcha: '', firstname: 'Ada', lastname: 'Lovelace', phone: '+974 1234', email: 'ada@example.test', service: 'Other enquiry', message: 'Hello' };
+  const vendor = { form: 'vendor', _gotcha: '', name: 'Ada', phone: '+974 1234', email: 'ada@example.test', company: 'Example', 'company-type': 'Supplier', category: 'Other', overview: 'Example vendor', consent: 'on' };
+  try {
+    const enabledPage = await (await app.fetch(new Request('https://example.test/contact'))).text();
+    assert.match(enabledPage, /<fieldset\s+data-astro-cid-/);
+    assert.doesNotMatch(enabledPage, /<fieldset disabled/);
+    assert.doesNotMatch(enabledPage, /test-secret|test-key/);
+    assert.equal((await submit(contact, 'https://attacker.test')).status, 403);
+    assert.equal((await submit({ ...contact, service: 'invalid' })).status, 400);
+    assert.equal((await submit({ ...vendor, consent: '' })).status, 400);
+    assert.equal((await submit({ ...contact, _gotcha: 'spam' })).status, 400);
+    assert.equal((await submit({ ...contact, message: 'x'.repeat(17000) })).status, 413);
+    assert.equal(calls.length, 0);
+    assert.equal((await submit(contact)).status, 200);
+    assert.match(calls[0].url, /^https:\/\/api\.hsforms\.com\//);
+    assert.equal(calls[0].body.fields.find((field) => field.name === 'message').value, 'Service: Other enquiry\n\nHello');
+    assert.match(calls[1].url, /^https:\/\/api\.mailjet\.com\//);
+    assert.equal((await submit(vendor)).status, 200);
+    assert.equal(calls[2].body.fields.find((field) => field.name === 'industry').value, 'supplier');
+    assert.equal(calls[2].body.fields.find((field) => field.name === 'client_type').value, 'Other');
+    assert.equal(calls.length, 4);
+    globalThis.fetch = async () => new Response('', { status: 500 });
+    assert.equal((await submit(contact)).status, 502);
+  } finally {
+    globalThis.fetch = previous;
+    for (const [key, value] of Object.entries(old)) if (value === undefined) delete process.env[key]; else process.env[key] = value;
+  }
+});
+
+test('CMS content and settings are validated, with local fallback', async () => {
+  const env = { CMS_ENABLED: 'true', SANITY_PROJECT_ID: 'testproject', SANITY_DATASET: 'testing', SANITY_API_READ_TOKEN: '' };
+  const old = Object.fromEntries(Object.keys(env).map((key) => [key, process.env[key]]));
+  Object.assign(process.env, env);
+  const previous = globalThis.fetch;
+  let cmsPhone = '+974 12345678';
+  const article = { slug: 'cms-example', title: 'CMS Example', summary: 'CMS summary', publishedAt: '2025-01-03', category: 'Updates', image: 'https://cdn.sanity.io/images/testproject/testing/example.jpg', body: [{ _type: 'block', children: [{ _type: 'span', text: 'CMS body' }] }] };
+  globalThis.fetch = async (url) => {
+    const query = new URL(url instanceof Request ? url.url : String(url)).searchParams.get('query') ?? '';
+    return Response.json({ result: query.includes('securitySiteSettings') ? { name: 'CMS company', email: 'cms@example.test', phone: cmsPhone } : [article, { ...article, slug: 'bad-image', image: 'https://evil.test/pixel' }] });
+  };
+  try {
+    const index = await (await app.fetch(new Request('https://example.test/news'))).text();
+    assert.match(index, /CMS Example/);
+    assert.match(index, /CCTV Surveillance System Installation/);
+    assert.doesNotMatch(index, /evil\.test/);
+    assert.match(index, /cms@example.test/);
+    assert.match(index, /href="tel:\+97412345678"/);
+    for (const invalidPhone of ['+-----', '123 45', '+1234567890123456']) {
+      cmsPhone = invalidPhone;
+      const html = await (await app.fetch(new Request('https://example.test/news'))).text();
+      assert.match(html, /href="tel:\+97444866766"/);
+      assert.match(html, /\+974 44866766/);
+    }
+    const detail = await (await app.fetch(new Request('https://example.test/news/cms-example'))).text();
+    assert.match(detail, /CMS body/);
+    globalThis.fetch = async () => { throw new Error('offline'); };
+    const fallback = await (await app.fetch(new Request('https://example.test/news'))).text();
+    assert.match(fallback, /CCTV Surveillance System Installation/);
+    assert.doesNotMatch(fallback, /CMS Example/);
+  } finally {
+    globalThis.fetch = previous;
+    for (const [key, value] of Object.entries(old)) if (value === undefined) delete process.env[key]; else process.env[key] = value;
+  }
+});

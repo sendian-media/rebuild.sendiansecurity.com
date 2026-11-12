@@ -98,7 +98,7 @@
   .page-contact .send-button { gap: calc(24 * var(--ds-px)); margin-top: calc(28 * var(--ds-px)); min-height: calc(50 * var(--ds-px)); padding: calc(10 * var(--ds-px)) calc(22 * var(--ds-px)); font-size: calc(13 * var(--ds-type-px)); }
   .page-contact .location { padding-block: calc(96 * var(--ds-px)); }
   .page-contact .location p:not(.eyebrow) { margin-top: calc(22 * var(--ds-px)); }
-  .page-contact .location iframe { height: calc(400 * var(--ds-px)); }
+  .page-contact .location .map-placeholder { height: calc(400 * var(--ds-px)); }
 
   .page-service-detail :is(.sp-hero, .sp-hero-inner) { min-height: calc(340 * var(--ds-px)); }
   .page-service-detail .sp-hero-inner { gap: calc(32 * var(--ds-px)); }

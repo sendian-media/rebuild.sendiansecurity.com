@@ -1,5 +1,6 @@
 ---
-import { site as business } from '@/data/site';
+import { getSite } from '@/lib/cms';
+const business = await getSite();
 
 interface Props {
   title: string;
