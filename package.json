@@ -10,12 +10,16 @@
     "dev": "astro dev --host 127.0.0.1 --port 3888",
     "check": "astro check",
     "build": "astro build",
-    "test:build": "node --test tests/vercel-output.test.mjs"
+    "build:hostinger": "HOSTINGER_BUILD=true astro build",
+    "start": "node ./dist/server/entry.mjs",
+    "test:build": "node --test tests/vercel-output.test.mjs",
+    "test:hostinger": "node --test tests/hostinger-output.test.mjs"
   },
   "dependencies": {
-    "@astrojs/vercel": "^11.0.20",
+    "@astrojs/node": "^11.1.12",
     "@astrojs/react": "^7.1.2",
     "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/vercel": "^11.0.20",
     "@portabletext/astro": "^0.2.0",
     "@sanity/client": "^8.9.0",
     "@tailwindcss/vite": "^4.2.4",

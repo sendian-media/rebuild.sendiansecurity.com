@@ -20,7 +20,13 @@ npm run build
 npm run test:build
 ```
 
-Development binds to `127.0.0.1:3888`. If that port is occupied, use `npm run dev -- --port 3889`. The Vercel adapter does not support `astro preview` or a standalone Node server; the old `preview` and `start` scripts have been removed. `test:build` invokes the generated Vercel function locally to check routes, portfolio filters, and bundled assets.
+Development binds to `127.0.0.1:3888`. If that port is occupied, use `npm run dev -- --port 3889`. The default Vercel build does not support `astro preview` or a standalone Node server; `npm start` is for the Hostinger build only. `test:build` invokes the generated Vercel function locally to check routes, portfolio filters, and bundled assets.
+
+## Hostinger deployment
+
+The default build targets Vercel. For a Hostinger Node.js deployment, set the build command to `npm run build:hostinger` and the server entry file to `dist/server/entry.mjs` (or use `npm start` if the panel accepts a start command). The standalone server serves both the pages and `dist/client` assets. Select Node.js 22.x and use the port provided by Hostinger; do not hard-code a port. Verify the output directory and entry file conventions in the Hostinger panel, then check runtime logs and the generated routing if requests fail. Do not publish `dist/server` as a static directory. Production deployment requires explicit approval.
+
+Locally, run `npm run build:hostinger` followed by `npm run test:hostinger`; the test binds only to `127.0.0.1`. A subsequent `npm run build` restores the Vercel-targeted output.
 
 ## Vercel deployment
 

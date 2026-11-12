@@ -21,3 +21,5 @@ jobs:
       - run: npm run check
       - run: npm run build
       - run: npm run test:build
+      - run: npm run build:hostinger
+      - run: npm run test:hostinger
