@@ -102,7 +102,6 @@
   .page-portfolio .pf-w-std { width: calc((100% - 48 * var(--ds-px)) / 3); }
   .page-portfolio .pf-w-mid { width: calc((100% - 24 * var(--ds-px)) / 2); }
   .page-portfolio .pf-w-wide { width: calc((100% - 48 * var(--ds-px)) * 2 / 3 + 24 * var(--ds-px)); }
-  .page-portfolio .pf-badge { top: calc(12 * var(--ds-px)); left: calc(12 * var(--ds-px)); max-width: calc(100% - 24 * var(--ds-px)); padding: calc(6 * var(--ds-px)) calc(9 * var(--ds-px)); font-size: calc(10 * var(--ds-type-px)); line-height: 1.5; }
   .page-portfolio .pf-card h4 { margin-top: calc(17 * var(--ds-px)); font-size: calc(20 * var(--ds-type-px)); line-height: 1.3; }
   .page-portfolio .pf-card:is(.pf-w-mid, .pf-w-wide) h4 { font-size: calc(24 * var(--ds-type-px)); line-height: 1.29167; }
   .page-portfolio .pf-scope { margin-top: calc(12 * var(--ds-px)); font-size: calc(14 * var(--ds-type-px)); line-height: 1.5; }
