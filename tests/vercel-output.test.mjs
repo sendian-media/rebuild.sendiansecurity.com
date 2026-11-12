@@ -40,6 +40,20 @@ for (const path of ['/', '/about', '/portfolio', '/services']) {
   });
 }
 
+test('homepage renders the accessible process carousel and all five steps', async () => {
+  const response = await app.fetch(new Request('https://example.test/'));
+  const html = await response.text();
+  assert.match(html, /aria-roledescription="carousel" data-process-carousel/);
+  assert.equal((html.match(/<article[^>]*data-process-card/g) ?? []).length, 5);
+  for (const title of ['Consult', 'Design', 'Deploy', 'Commission', 'Maintain']) {
+    assert(html.includes(`>${title}</h3>`), title);
+  }
+  assert.match(html, /aria-label="Previous process step"/);
+  assert.match(html, /aria-label="Next process step"/);
+  assert.match(html, /id="process-track" tabindex="0"/);
+  assert(!html.includes('class="process-grid"'));
+});
+
 test('linked vendor and legal pages render locally', async () => {
   for (const [path, text] of [
     ['/vendor-registration', 'Register your company'],

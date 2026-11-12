@@ -22,7 +22,7 @@
   .page-home .container { width: var(--ds-shell); max-width: none; }
   .page-home :where(h1, h2, h3, p, a, span) { overflow-wrap: anywhere; }
   .page-home :where(main p) { max-inline-size: 65ch; }
-  .page-home :where(.hero-copy, .about-grid > *, .solutions-grid > *, .process-grid > *, .trust-grid > *, .certificates-grid > *, .projects-grid > *, .footer-grid > *) { min-inline-size: 0; }
+  .page-home :where(.hero-copy, .about-grid > *, .solutions-grid > *, .process-track > *, .trust-grid > *, .certificates-grid > *, .projects-grid > *, .footer-grid > *) { min-inline-size: 0; }
   .page-home main > section[id] { scroll-margin-top: calc(var(--ds-header-height, 92 * var(--ds-px)) + 48 * var(--ds-px)); }
   .page-home .skip-link { left: calc(12 * var(--ds-px)); padding: calc(12 * var(--ds-px)); }
   .page-home .eyebrow { font-size: var(--ds-text-caption); }
@@ -90,13 +90,6 @@
   .page-home .solution h3 { margin-top: calc(12 * var(--ds-px)); font-size: calc(20 * var(--ds-type-px)); }
   .page-home .solution > p:last-child { margin-top: calc(11 * var(--ds-px)); font-size: calc(15 * var(--ds-type-px)); }
 
-  .page-home .process { padding-block: calc(96 * var(--ds-px)) calc(100 * var(--ds-px)); }
-  .page-home .process h2 { margin-top: calc(19 * var(--ds-px)); font-size: calc(44 * var(--ds-type-px)); }
-  .page-home .process-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: calc(70 * var(--ds-px)); }
-  .page-home .process-step { height: auto; min-height: calc(280 * var(--ds-px)); padding: var(--ds-grid-gap); gap: var(--ds-grid-gap); }
-  .page-home .process-step-heading { flex-wrap: wrap; gap: calc(6 * var(--ds-px)); font-size: calc(12 * var(--ds-type-px)); }
-  .page-home .process-step-heading h3 { font-size: calc(12 * var(--ds-type-px)); }
-  .page-home .process-step p { font-size: calc(15 * var(--ds-type-px)); line-height: 1.533333; }
 
   .page-home .trust { padding-block: calc(66 * var(--ds-px)) calc(56 * var(--ds-px)); }
   .page-home .trust h2 { margin-top: calc(20 * var(--ds-px)); font-size: calc(43 * var(--ds-type-px)); }
